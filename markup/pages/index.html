@@ -6,9 +6,140 @@
 <body class="page" style="visibility: hidden;opacity: 0;">
     %=symbols=%
 
-    {{> header/header}}
+    <div class="container">
+        <div class="sidebar">
+            {{> sidebar/sidebar}}
+        </div>
+        <div class="content">
+            {{> header/header-1}}
 
+            <div class="first">
+                <div class="first__bg m-bg-cont">
+                    <img src="%=static=%img/content/first-1.jpg" alt="">
+                </div>
+                <div class="wrapper">
+                    <div class="first__container">
+                        <div class="first__info">
+                            <div class="m-title">
+                                Услуги и решения
+                            </div>
+                            <div class="bread mt15">
+                                {{> bread/bread}}
+                            </div>
     
+                            <div class="first__desc">
+                                <div class="first__text">
+                                    Благодаря долгому, плодотворному сотрудничеству с нашими партнерами, мы имеем возможность
+                                    поставлять оборудование для Клиентов в кратчайшие сроки и по приемлемым ценам.
+                                </div>
+                                <div class="m-desc">
+                                    Наша компания работает с крупнейшими, зарекомендовавшими себя на рынке производителями.
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="serv">
+                <div class="serv__container">
+
+                    <div class="serv__left">
+
+                        <div class="serv__item">
+                            <div class="serv__img">
+                                {{Icon iconName="fire"}}
+                            </div>
+                            <div class="serv__text">
+                                Cоздание проектно-сметной документации
+                            </div>
+                            <div class="serv__arrow">
+                                {{Icon iconName="serv-arrow"}}
+                            </div>
+                        </div>
+
+                        <div class="serv__item">
+                            <div class="serv__img">
+                                {{Icon iconName="fire"}}
+                            </div>
+                            <div class="serv__text">
+                                    Оптимальный выбор оборудования
+                            </div>
+                            <div class="serv__arrow">
+                                {{Icon iconName="serv-arrow"}}
+                            </div>
+                        </div>
+
+                        <div class="serv__item">
+                            <div class="serv__img">
+                                {{Icon iconName="fire"}}
+                            </div>
+                            <div class="serv__text">
+                                    Поставка и монтаж оборудования
+                            </div>
+                            <div class="serv__arrow">
+                                {{Icon iconName="serv-arrow"}}
+                            </div>
+                        </div>
+
+                        <div class="serv__item">
+                            <div class="serv__img">
+                                {{Icon iconName="fire"}}
+                            </div>
+                            <div class="serv__text">
+                                    Пуско-наладочные работы
+                            </div>
+                            <div class="serv__arrow">
+                                {{Icon iconName="serv-arrow"}}
+                            </div>
+                        </div>
+
+                        <div class="serv__item">
+                            <div class="serv__img">
+                                {{Icon iconName="fire"}}
+                            </div>
+                            <div class="serv__text">
+                                    Метрологическое обеспечение
+                            </div>
+                            <div class="serv__arrow">
+                                {{Icon iconName="serv-arrow"}}
+                            </div>
+                        </div>
+
+                        <div class="serv__item">
+                            <div class="serv__img">
+                                {{Icon iconName="fire"}}
+                            </div>
+                            <div class="serv__text">
+                                    Последующее сервисное обслуживание
+                            </div>
+                            <div class="serv__arrow">
+                                {{Icon iconName="serv-arrow"}}
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="serv__right">
+                        <div class="serv__right-container">
+                            <div class="serv__bg m-bg-cont">
+                                <img src="%=static=%img/content/serv-img.jpg" alt="">
+                            </div>
+                            <div class="serv__bg-bg-2"></div>
+                            <div class="serv__bg-bg-1"></div>
+                            <div class="serv__icon">
+                                {{Icon iconName="big-fire"}}
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
 
 
     {{> footer/footer}}

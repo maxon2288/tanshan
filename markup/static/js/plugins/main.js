@@ -2,8 +2,6 @@
 $(document).ready(function () {
 	$("body").css({'visibility': "visible", "opacity": "1"});
 	popup ();
-	M.AutoInit();
-	// forms();
 
 	var swiper = new Swiper('.slider', {
 		spaceBetween: 10,
@@ -12,6 +10,8 @@ $(document).ready(function () {
 			prevEl: '.slider-prev',
 		},
 	});
+
+	$(".sticky-block").stick_in_parent();
 
 
 	$(document).ready(function() {
@@ -60,5 +60,10 @@ $(document).ready(function () {
 		$input.val(temp >= min ? temp : min);
 		$(".number-result").text($input.val());
     });
-	 
+	
+	$(".m-bg-cont").each(function() {
+		var it = $(this);
+		var src = it.find("img").attr("src");
+		it.css("background-image", "url(" + src + ")");
+	});
 })
