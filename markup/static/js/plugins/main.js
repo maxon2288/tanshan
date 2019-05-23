@@ -11,11 +11,26 @@ $(document).ready(function () {
 		},
 	});
 
-	$(".sticky-block").stick_in_parent();
+	$(".html img").each(function() {
+		$(this).wrap("<figure></figure>");
+	});
 
+	$(".sticky-block").stick_in_parent();
 
 	$(document).ready(function() {
 		$('select').niceSelect();
+	});
+
+	$(".tabs__container").each(function() {
+		$('.tabs__tab').click(function(e) {
+			e.preventDefault();
+			var it = $(this);
+			var href = it.attr("href");
+			it.closest(".tabs__tabs").find(".tabs__tab").removeClass("active");
+			it.addClass("active");
+			it.closest(".tabs__container").find(".tabs__block").removeClass("active");
+			it.closest(".tabs__container").find("." + href).addClass('active');
+		});
 	});
 
 	$('.form').each(function() {
@@ -41,6 +56,8 @@ $(document).ready(function () {
 			},  
          });
 	 });
+
+	 $(".tabs__tab:first-child").trigger("click");
 
 	 $(document).on('click', '.number-input-container .number-increment', function(e) {
         let $input = $(this).siblings('.number-input'),

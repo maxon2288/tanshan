@@ -1,2 +1,4 @@
 // Fonts by Maxim Sinukov
-// @include font-face("ral", "../fonts/prox/prox", 900, normal);
+@include font-face("gotham", "../fonts/gotham/gothampro-light", 300, normal);
+@include font-face("gotham", "../fonts/gotham/gothampro-bold", 700, normal);
+@include font-face("gotham", "../fonts/gotham/gothampro", 400, normal);
