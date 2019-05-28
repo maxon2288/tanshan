@@ -83,4 +83,17 @@ $(document).ready(function () {
 		var src = it.find("img").attr("src");
 		it.css("background-image", "url(" + src + ")");
 	});
+
+	var galleryThumbs = new Swiper('.prji__slider-thumb', {
+		spaceBetween: 30,
+		slidesPerView: 4,
+	  });
+	  var galleryTop = new Swiper('.prji__slider-top', {
+		spaceBetween: 10,
+		thumbs: {
+		  swiper: galleryThumbs
+		}
+	  });
+	
+	$('.collapsible1').collapsible();
 })

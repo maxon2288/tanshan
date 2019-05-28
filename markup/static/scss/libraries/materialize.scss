@@ -1,0 +1,41 @@
+/*!
+ * Materialize v0.100.2 (http://materializecss.com)
+ * Copyright 2014-2017 Materialize
+ * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
+ */
+
+
+.collapsible .collection {
+    margin: 0;
+    border: none
+}
+
+.collapsible-body {
+    display: none;
+}
+
+.side-nav .collapsible,
+.side-nav.fixed .collapsible {
+    border: none;
+}
+
+.side-nav .collapsible li,
+.side-nav.fixed .collapsible li {
+    padding: 0
+}
+
+.side-nav .collapsible-header,
+.side-nav.fixed .collapsible-header {
+    background-color: transparent;
+    border: none;
+    line-height: inherit;
+    height: inherit;
+}
+
+
+
+.collapsible.popout {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}

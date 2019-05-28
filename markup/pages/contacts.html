@@ -1,0 +1,166 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body class="page" style="visibility: hidden;opacity: 0;">
+        %=symbols=%
+        
+    <div class="container">
+        <div class="sidebar">
+            {{> sidebar/sidebar}}
+        </div>
+        <div class="content">
+            {{> header/header-1}}
+
+            <div class="first">
+                <div class="first__bg m-bg-cont">
+                    <img src="%=static=%img/content/first-1.jpg" alt="">
+                </div>
+                <div class="first__animation">
+                        {{Icon className="first__animation-svg-1" iconName="first-animation-2"}}
+                        {{Icon className="first__animation-svg-2" iconName="first-animation"}}
+                        {{Icon className="first__animation-svg-3" iconName="first-animation-2"}}
+                        {{Icon className="first__animation-svg-4" iconName="first-animation"}}
+                        {{Icon className="first__animation-svg-5" iconName="first-animation-2"}}
+                    </div>
+                <div class="wrapper">
+                    <div class="first__container">
+                        <div class="first__info">
+                            <div class="m-title">
+                                    Контакты
+                            </div>
+                            <div class="bread mt15">
+                                {{> bread/bread}}
+                            </div>
+    
+                            <div class="first__desc mt65">
+                                <div class="first__text">
+                                    
+                                </div>
+                                <div class="m-desc">
+
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="maps">
+                <div class="wrapper">
+                    
+                    <div class="maps__container">
+                        
+                        <div class="map__container">
+                            <div class="map__left">
+                                <div class="ymap map__map" data-x="55.234774" data-y="61.437345"></div>
+                            </div>
+                
+                            <div class="map__right">
+                
+                                <div class="map__info">
+                                    <div class="map__info-title">
+                                            офис в алматы
+                                    </div>
+                                    <div class="map__item map-marker" data-x="55.234774" data-y="61.437345">
+                                        <div class="map__icon">
+                                            {{Icon iconName="marker"}}
+                                        </div>
+                                        <span>
+                                                ул. Тимирязева,42, павильон 17
+                                        </span>
+                                    </div>
+                                    <div class="map__item">
+                                        <div class="map__icon">
+                                            {{Icon iconName="map-phone"}}
+                                        </div>
+                                        <span>
+                                            Тел.: <a href="tel:+77272742222">+7 727 274 22 22</a>
+                                        </span>
+                                    </div>
+                                    <div class="map__item">
+                                        <div class="map__icon">
+                                            {{Icon iconName="map-fax"}}
+                                        </div>
+                                        <span>
+                                            Факс: <a href="fax:+77272265034">+7 727 226 50 34</a>
+                                        </span>
+                                    </div>
+                                    <div class="map__item">
+                                        <div class="map__icon">
+                                            {{Icon iconName="map-email"}}
+                                        </div>
+                                        <span>
+                                            E-mail: <a href="mailto:box@t-sh-e.com">box@t-sh-e.com</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="map__container">
+                            <div class="map__left">
+                                <div class="ymap map__map" data-x="55.234774" data-y="61.437345"></div>
+                            </div>
+                
+                            <div class="map__right">
+                
+                                <div class="map__info">
+                                    <div class="map__info-title">
+                                            ОФИС В АКТОБЕ
+                                    </div>
+                                    <div class="map__item map-marker" data-x="55.234774" data-y="61.437345">
+                                        <div class="map__icon">
+                                            {{Icon iconName="marker"}}
+                                        </div>
+                                        <span>
+                                            г. Алматы, ул. Тимирязева,42, павильон 17
+                                        </span>
+                                    </div>
+                                    <div class="map__item">
+                                        <div class="map__icon">
+                                            {{Icon iconName="map-phone"}}
+                                        </div>
+                                        <span>
+                                            Тел.: <a href="tel:+77272742222">+7 727 274 22 22</a>
+                                        </span>
+                                    </div>
+                                    <div class="map__item">
+                                        <div class="map__icon">
+                                            {{Icon iconName="map-fax"}}
+                                        </div>
+                                        <span>
+                                            Факс: <a href="fax:+77272265034">+7 727 226 50 34</a>
+                                        </span>
+                                    </div>
+                                    <div class="map__item">
+                                        <div class="map__icon">
+                                            {{Icon iconName="map-email"}}
+                                        </div>
+                                        <span>
+                                            E-mail: <a href="mailto:box@t-sh-e.com">box@t-sh-e.com</a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    {{> footer/footer}}
+    
+</body>
+</html>

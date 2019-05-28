@@ -1,0 +1,166 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body class="page" style="visibility: hidden;opacity: 0;">
+        %=symbols=%
+        
+    <div class="container">
+        <div class="sidebar">
+            {{> sidebar/sidebar}}
+        </div>
+        <div class="content">
+            {{> header/header-1}}
+
+            <div class="first">
+                <div class="first__bg m-bg-cont">
+                    <img src="%=static=%img/content/first-1.jpg" alt="">
+                </div>
+                <div class="first__animation">
+                        {{Icon className="first__animation-svg-1" iconName="first-animation-2"}}
+                        {{Icon className="first__animation-svg-2" iconName="first-animation"}}
+                        {{Icon className="first__animation-svg-3" iconName="first-animation-2"}}
+                        {{Icon className="first__animation-svg-4" iconName="first-animation"}}
+                        {{Icon className="first__animation-svg-5" iconName="first-animation-2"}}
+                    </div>
+                <div class="wrapper">
+                    <div class="first__container">
+                        <div class="first__info">
+                            <div class="m-title">
+                                    Частые вопросы
+                            </div>
+                            <div class="bread mt15">
+                                {{> bread/bread}}
+                            </div>
+    
+                            <div class="first__desc mt65">
+                                <div class="first__text">
+                                    
+                                </div>
+                                <div class="m-desc">
+
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="wrapper">
+                    <div class="faq__container ">
+                        <ul class="faq__col collapsible1">
+
+                            <li class="faq__item">
+                                <div class="faq__header collapsible-header">
+                                    <span>В какое время вам можно звонить?</span>
+                                    <div class="faq__plus">
+                                    </div>
+                                </div>
+                                <div class="faq__body collapsible-body">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, itaque a facilis earum, ipsam quia iste sapiente exercitationem, ipsum tempora magnam beatae. Cupiditate officiis nobis doloremque ducimus similique dolorum beatae?
+                                </div>
+                            </li>
+
+                            <li class="faq__item">
+                                <div class="faq__header collapsible-header">
+                                    <span>В какое время вам можно звонить?</span>
+                                    <div class="faq__plus">
+                                    </div>
+                                </div>
+                                <div class="faq__body collapsible-body">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, itaque a facilis earum, ipsam quia iste sapiente exercitationem, ipsum tempora magnam beatae. Cupiditate officiis nobis doloremque ducimus similique dolorum beatae?
+                                </div>
+                            </li>
+
+                            <li class="faq__item">
+                                <div class="faq__header collapsible-header">
+                                    <span>В какое время вам можно звонить?</span>
+                                    <div class="faq__plus">
+                                    </div>
+                                </div>
+                                <div class="faq__body collapsible-body">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, itaque a facilis earum, ipsam quia iste sapiente exercitationem, ipsum tempora magnam beatae. Cupiditate officiis nobis doloremque ducimus similique dolorum beatae?
+                                </div>
+                            </li>
+
+
+                        </ul>
+                        <ul class="faq__col collapsible">
+                            
+                            <li class="faq__item">
+                                <div class="faq__header collapsible-header">
+                                    <span>В какое время вам можно звонить?</span>
+                                    <div class="faq__plus">
+                                    </div>
+                                </div>
+                                <div class="faq__body collapsible-body">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, itaque a facilis earum, ipsam quia iste sapiente exercitationem, ipsum tempora magnam beatae. Cupiditate officiis nobis doloremque ducimus similique dolorum beatae?
+                                </div>
+                            </li>
+                            
+                            <li class="faq__item">
+                                <div class="faq__header collapsible-header">
+                                    <span>В какое время вам можно звонить?</span>
+                                    <div class="faq__plus">
+                                    </div>
+                                </div>
+                                <div class="faq__body collapsible-body">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, itaque a facilis earum, ipsam quia iste sapiente exercitationem, ipsum tempora magnam beatae. Cupiditate officiis nobis doloremque ducimus similique dolorum beatae?
+                                </div>
+                            </li>
+                            
+                            <li class="faq__item">
+                                <div class="faq__header collapsible-header">
+                                    <span>В какое время вам можно звонить?</span>
+                                    <div class="faq__plus">
+                                    </div>
+                                </div>
+                                <div class="faq__body collapsible-body">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, itaque a facilis earum, ipsam quia iste sapiente exercitationem, ipsum tempora magnam beatae. Cupiditate officiis nobis doloremque ducimus similique dolorum beatae?
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="m-form__container">
+                    <form action="#" class="m-form">
+                        <div class="m-form__title m-title-2">
+                        Не нашли ответ?
+                        </div>
+
+                        <div class="m-form__desc">
+                                Задайте нам любой интересующий вас вопрос <br>
+                                Наш специалист перезвонит вам в течение 2 минут
+                        </div>
+                        <div class="m-form__fields-2">
+                            <textarea class="m-textarea" placeholder="Напишите Ваш вопрос"></textarea>
+                            
+                            <div class="m-form__fields-container">
+                                <input type="text" class="phone-mask m-field mr15" placeholder="Номер телефона">
+                                <button class="m-button">Отправить</button>
+                            </div>
+                        </div>
+
+                        <div class="m-form__bottom-text">
+                            Нажимая кнопку, я соглашаюсь с политикой
+                            обработки персональных данных
+                        </div>
+                        
+                    </form>
+                </div>
+
+            {{> map/map}}
+        </div>
+    </div>
+    {{> footer/footer}}
+    
+</body>
+</html>
