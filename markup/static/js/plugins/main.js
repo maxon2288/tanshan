@@ -57,7 +57,98 @@ $(document).ready(function () {
          });
 	 });
 
-	 $(".tabs__tab:first-child").trigger("click");
+	 new WOW().init();
+
+	 var path = $(".cycle-path").get(0);
+	//  var pathlen = path.getTotalLength();
+	
+	if ($(".cycle__content").length > 0) {
+		if ( $(window).scrollTop() >= $(".cycle__content").offset().top - window.innerHeight ) {
+			$(".cycle__item").addClass("cycle-animation");
+			$(".cycle-path").css({"animation": "cycleanim 10s linear", "opacity": 1});
+			$(".cycle-circle").css({"animation": "circleAnim 10s linear", "opacity": 1});
+			$(".cycle-circle").css("opacity", 1);
+		}
+		var a = 0;
+		$(window).scroll(function(){
+			if ( $(window).scrollTop() >= $(".cycle__content").offset().top - $(".cycle__content").innerHeight() ) {
+				$(".cycle__item").addClass("cycle-animation");
+				$(".cycle-path").css({"animation": "cycleanim 10s linear", "opacity": 1});
+				$(".cycle-circle").css("opacity", 1);
+			}
+		});
+	}
+	if ($(".reason").length > 0) {
+		var oTop = $('.reason__item').offset().top - window.innerHeight +150;
+		if (a == 0 && $(window).scrollTop() > oTop) {
+			$('.counter-value').each(function() {
+			var $this = $(this),
+				countTo = $this.attr('data-count');
+				var floor = Math.floor(Math.random() * 20) + 20;
+				var floor2 = floor * 100;
+			$({
+				countNum: $this.text()
+			}).animate({
+				countNum: countTo
+				},
+	
+				{
+	
+				duration: floor2,
+				easing: 'swing',
+				step: function() {
+					$this.text(Math.floor(this.countNum));
+				},
+				complete: function() {
+					$this.text(this.countNum);
+					//alert('finished');
+				}
+	
+				});
+			});
+			a = 1;
+		}	
+		
+		$(window).scroll(function() {
+			
+			var oTop = $('.reason__item').offset().top - window.innerHeight +150;
+			if (a == 0 && $(window).scrollTop() > oTop) {
+				$('.counter-value').each(function() {
+					var $this = $(this),
+					countTo = $this.attr('data-count');
+					var floor = Math.floor(Math.random() * 20) + 20;
+		var floor2 = floor * 100;
+		console.log(floor2);
+					$({
+				countNum: $this.text()
+			}).animate({
+				countNum: countTo
+				},
+	
+				{
+	
+				duration: floor2,
+				easing: 'swing',
+				step: function() {
+					$this.text(Math.floor(this.countNum));
+				},
+				complete: function() {
+					$this.text(this.countNum);
+					//alert('finished');
+				}
+	
+				});
+			});
+			a = 1;
+		}
+	
+		});
+	}
+
+	$(".lightgallery").lightGallery(); 
+	
+	 
+
 
 	 $(document).on('click', '.number-input-container .number-increment', function(e) {
         let $input = $(this).siblings('.number-input'),
