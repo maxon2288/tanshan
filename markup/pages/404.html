@@ -1,0 +1,59 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<head>
+    {{> head/head head.defaults}}
+</head>
+
+<body class="page" style="visibility: hidden;opacity: 0;">
+        %=symbols=%
+
+        <div class="container">
+            <div class="found">
+                <div class="found__bg m-bg-cont">
+                    <img src="%=static=%img/content/404-bg.jpg" alt="">
+                </div>
+                <div class="found__animation">
+                    <div class="canvas-container">
+                        <canvas class="canvas" id="sineCanvas"></canvas>
+                        <canvas class="canvas" id="sineCanvas2"></canvas>
+                    </div>
+
+                    <div class="found__line">
+                        {{Icon iconName="found-line" className="found-line-1"}}
+                        {{Icon iconName="found-line" className="found-line-2"}}
+                        {{Icon iconName="found-line" className="found-line-3"}}
+                        {{Icon iconName="found-line" className="found-line-4"}}
+                        {{Icon iconName="found-line" className="found-line-5"}}
+                    </div>
+                    <div class="found__line-2">
+                        {{Icon iconName="found-line" className="found-line-1"}}
+                        {{Icon iconName="found-line" className="found-line-2"}}
+                        {{Icon iconName="found-line" className="found-line-3"}}
+                        {{Icon iconName="found-line" className="found-line-4"}}
+                        {{Icon iconName="found-line" className="found-line-5"}}
+                    </div>
+                    
+                </div>
+                <div class="found__content">
+                    <div class="found__title wow fadeIn">
+                        404
+                    </div>
+                    <div class="found__desc wow fadeIn">
+                            Уупс!
+                            
+                    </div>
+                    <div class="found__text wow fadeIn">
+                            Страница не найдена и не может быть найдена, <br>
+                            потому что она утеряна
+                    </div>
+                    <a href="#" class="m-button wow fadeIn">
+                            Перейти на главную
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        {{> scripts/scripts}}
+    
+</body>
+</html>

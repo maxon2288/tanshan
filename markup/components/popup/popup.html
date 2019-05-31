@@ -1,13 +1,84 @@
-<div class="overlay "></div>
+<div class="overlay"></div>
 
-<div class="popup popup-delete-user ">
-    <div class="popup__container">
-        <div class="popup-content">
-            <div class="popup__close popupClose">
-                <!-- close buttton -->
-            </div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis commodi odit, accusantium ad quasi, unde doloribus vitae nam ea, nobis excepturi autem reiciendis velit tempora optio aspernatur? Atque, perferendis distinctio.
+<div class="popup form-consult">
+    <a href="index.html" class="sidebar__logo">
+        <img src="%=static=%img/content/sidebar-logo.png" alt="">
+    </a>
+    <div class="popup__content">
+        <div class="popup__title">
+                Заполните форму ниже <br>
+                и наш менеджер свяжется <br>
+                с Вами в ближайшие 30 минут
         </div>
+    </div>
+    <form action="#" class="popup__form">
+        <input type="text" class="m-field" placeholder="Имя" name="name">
+        <input type="text" class="m-field phone-mask" placeholder="Телефон" name="phone">
+        <button class="m-button">
+                ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+        </button>
+    </form>
+    <div class="popup__text">
+            * Нажимая кнопку, я соглашаюсь <br> 
+            с <a href="#">политикой обработки персональных данных</a>
+    </div>
+</div>
+
+<div class="popup form-call">
+    <a href="index.html" class="sidebar__logo">
+        <img src="%=static=%img/content/sidebar-logo.png" alt="">
+    </a>
+    <div class="popup__content">
+        <div class="popup__title">
+                Заполните форму ниже <br>
+                и наш менеджер свяжется <br>
+                с Вами в ближайшие 30 минут
+        </div>
+    </div>
+    <form action="#" class="popup__form">
+        <input type="text" class="m-field" placeholder="Имя" name="name">
+        <input type="text" class="m-field phone-mask" placeholder="Телефон" name="phone">
+        <button class="m-button">
+            ЗАКАЗАТЬ ЗВОНОК
+        </button>
+    </form>
+    <div class="popup__text">
+            * Нажимая кнопку, я соглашаюсь <br> 
+            с <a href="#">политикой обработки персональных данных</a>
+    </div>
+</div>
+
+<div class="popup thanx-popup"> 
+    <a href="index.html" class="sidebar__logo">
+        <img src="%=static=%img/content/sidebar-logo.png" alt="">
+    </a>
+    <div class="popup__content">
+        <div class="popup-icon-ok">
+            {{Icon iconName="popup-ok"}}
+        </div>
+    </div>
+    <div class="popup__title">
+            Спасибо!
+    </div>
+    <div class="popup__text mt20 mb40">
+            Ваша заявка принята, <br>
+            скоро мы Вам перезвоним
+    </div>
+    <div class="m-button popupClose">закрыть окно</div>
+</div>
+
+<div class="popup thanx-popup visible"> 
+    <a href="index.html" class="sidebar__logo">
+        <img src="%=static=%img/content/sidebar-logo.png" alt="">
+    </a>
+    <div class="popup__content">
+        <div class="popup-icon-ok">
+            {{Icon iconName="popup-ok"}}
+        </div>
+    </div>
+    <div class="m-button popupClose mb10">закрыть окно</div>
+    <div class="popup__text mt10">
+        <a href="#">Отменить подписку</a>
     </div>
 </div>
  

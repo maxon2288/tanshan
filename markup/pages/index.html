@@ -44,7 +44,7 @@
                                 </div>
                             </div>
 
-                            <a href="#" class="first__button">
+                            <a href="#" class="first__button callPopup" data-popupBlock="form-consult">
                                 Получить консультацию
                             </a>
 
@@ -219,6 +219,12 @@
             </div>
 
             <div class="region">
+                <div class="animation scene">
+                    <div class="animation__item" data-depth="-0.4">
+                            {{Icon iconName="region-animation"}}
+
+                    </div>
+                </div>
                 <div class="wrapper">
                     <div class="region__container">
                         <div class="region__top">
@@ -459,8 +465,9 @@
                                     <div class="reason__number">
                                         <div class="reason__counter-container">
                                             <span class="counter-value" data-count="12">0</span>
-                                            </div>
-                                        +
+                                            <div class="reason__let">лет</div>
+                                        </div>
+                                            
                                     </div>
                                     <div class="reason__text">
                                             опыта
@@ -475,7 +482,7 @@
                                     <div class="reason__number">
                                         
                                         <span class="counter-value" data-count="100">0</span>
-                                        +
+                                        %
                                     </div>
                                     <div class="reason__text">
                                             Казахстанское
@@ -691,16 +698,19 @@
 
                         <div class="opinion__content">
 
-                            <div class="rev-text lightgallery">
-                                <a href="%=static=%img/content/doc.jpg" class="doc">
-                                    <div class="doc__img m-bg-cont lightgallery">
+                            <div class="rev-text">
+                                <div class="doc">
+                                    <div class="doc__img m-bg-cont">
                                         <img src="%=static=%img/content/doc.jpg" alt="">
                                     </div>
                                     <div class="doc__button">
                                         {{Icon iconName="doc"}}
                                         Смотреть документ
                                     </div>
-                                </a>
+                                    <div class="doc__link lightgallery">
+                                        <a href="%=static=%img/content/doc.jpg"></a>
+                                    </div>
+                                </div>
                                 <div class="rev-text__content">
                                     <div class="rev-text__title">
                                             Старостин Матфей Владимирович
@@ -717,16 +727,19 @@
                                 </div>
                             </div>
 
-                            <div class="rev-text lightgallery">
-                                <a href="%=static=%img/content/doc.jpg" class="doc">
-                                    <div class="doc__img m-bg-cont lightgallery">
+                            <div class="rev-text">
+                                <div class="doc">
+                                    <div class="doc__img m-bg-cont">
                                         <img src="%=static=%img/content/doc.jpg" alt="">
                                     </div>
                                     <div class="doc__button">
                                         {{Icon iconName="doc"}}
                                         Смотреть документ
                                     </div>
-                                </a>
+                                    <div class="doc__link lightgallery">
+                                        <a href="%=static=%img/content/doc.jpg"></a>
+                                    </div>
+                                </div>
                                 <div class="rev-text__content">
                                     <div class="rev-text__title">
                                             Старостин Матфей Владимирович
@@ -743,7 +756,7 @@
                                 </div>
                             </div>
 
-                            <a href="https://www.youtube.com/watch?v=vJWJT7AAAhc" class="rev-video">
+                            <div class="rev-video">
                                 <div class="rev-video__bg m-bg-cont">
                                     <img src="%=static=%img/content/rev-video.jpg" alt="">
                                 </div>
@@ -759,9 +772,12 @@
                                 <div class="rev-video__link">
                                     Смотреть отзыв
                                 </div>
-                            </a>
+                                <div class="rev-video__light lightgallery">
+                                    <a href="https://www.youtube.com/watch?v=vJWJT7AAAhc"></a>
+                                </div>
+                            </div>
 
-                            <a href="https://www.youtube.com/watch?v=vJWJT7AAAhc" class="rev-video">
+                            <div class="rev-video">
                                 <div class="rev-video__bg m-bg-cont">
                                     <img src="%=static=%img/content/rev-video.jpg" alt="">
                                 </div>
@@ -777,14 +793,309 @@
                                 <div class="rev-video__link">
                                     Смотреть отзыв
                                 </div>
-                            </a>
+                                <div class="rev-video__light lightgallery">
+                                    <a href="https://www.youtube.com/watch?v=vJWJT7AAAhc"></a>
+                                </div>
+                            </div>
+
                         </div>
                         
                     </div>
                 </div>
             </div>
 
-            
+            <div class="lic">
+                <div class="wrapper">
+                    <div class="lic__container">
+                        <div class="lic__top">
+                            <div class="lic__top-container">
+                                <div class="m-title-2">
+                                    Лицензии и <span>сертификаты</span>
+                                </div>
+                                <a href="#" class="m-link m-link-before">
+                                        Смотреть все документы
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lic__content">
+                            <div class="lic__slider">
+                                <div class="swiper-container lic-slider">
+                                    <div class="swiper-wrapper">
+
+                                        <div class="swiper-slide lic__slide">
+                                            <div class="lic__slide-top m-bg-cont">
+                                                <img src="%=static=%img/content/lic1.jpg" alt="">
+                                            </div>
+
+                                            <div class="lic__text">
+                                                Государственные лицензии II категории на строительно- монтажные работы и проектирование
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="swiper-slide lic__slide">
+                                            <div class="lic__slide-top m-bg-cont">
+                                                <img src="%=static=%img/content/lic1.jpg" alt="">
+                                            </div>
+
+                                            <div class="lic__text">
+                                                Государственные лицензии II категории на строительно- монтажные работы и проектирование
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="swiper-slide lic__slide">
+                                            <div class="lic__slide-top m-bg-cont">
+                                                <img src="%=static=%img/content/lic1.jpg" alt="">
+                                            </div>
+
+                                            <div class="lic__text">
+                                                Государственные лицензии II категории на строительно- монтажные работы и проектирование
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="swiper-slide lic__slide">
+                                            <div class="lic__slide-top m-bg-cont">
+                                                <img src="%=static=%img/content/lic1.jpg" alt="">
+                                            </div>
+
+                                            <div class="lic__text">
+                                                Государственные лицензии II категории на строительно- монтажные работы и проектирование
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="swiper-slide lic__slide">
+                                            <div class="lic__slide-top m-bg-cont">
+                                                <img src="%=static=%img/content/lic1.jpg" alt="">
+                                            </div>
+
+                                            <div class="lic__text">
+                                                Государственные лицензии II категории на строительно- монтажные работы и проектирование
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="swiper-slide lic__slide">
+                                            <div class="lic__slide-top m-bg-cont">
+                                                <img src="%=static=%img/content/lic1.jpg" alt="">
+                                            </div>
+
+                                            <div class="lic__text">
+                                                Государственные лицензии II категории на строительно- монтажные работы и проектирование
+                                            </div>
+                                            
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lic__buttons">
+                                <div class="lic__button lic__button-next lic-next">
+                                    {{Icon iconName="slider-arrow"}}
+                                    <div class="lic__button-next-before scene"></div>
+                                </div>
+                                <div class="lic__button lic__button-prev lic-prev">
+                                    {{Icon iconName="slider-arrow"}}
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news">
+                <div class="wrapper">
+                    <div class="news__container">
+                        <div class="news__top">
+                            <div class="m-title-2">
+                                    <span>Новости</span>
+                            </div>
+                            <a href="#" class="m-link m-link-before">
+                                    Архив публикаций
+                            </a>
+                        </div>
+
+                        <div class="news__content">
+                            <div class="news__left">
+                                <div class="news__big">
+                                    <div class="news__big-bg m-bg-cont">
+                                        <img src="%=static=%img/content/news-bg.jpg" alt="">
+                                    </div>
+
+                                    <div class="news__big-date">
+                                        {{Icon iconName="news-time"}}
+                                        <span>28.02.2018</span>
+                                    </div>
+                                    <div class="news__big-title">
+                                            25-ая Юбилейная Казахстанская Международная выставка «НЕФТЬ
+                                            и ГАЗ» KIOGE 2017
+                                    </div>
+                                    <div class="news__big-desc">
+                                            с 04 октября по 06 октября в г. Алматы прошла 25-ая Юбилейная Казахстанская Международная выставка «НЕФТЬ и ГАЗ» KIOGE
+                                    </div>
+                                    <div class="news__big-bottom">
+                                        <a href="#" class="news__big-link">
+                                            Читать полностью
+                                            {{Icon iconName="news-arrow"}}
+                                        </a>
+                                        <div class="news__big-features">
+                                            <div class="news__big-com">
+                                                {{Icon iconName="news-com"}}
+                                                <span>15</span>
+                                            </div>
+                                            <div class="news__big-views">
+                                                {{Icon iconName="news-views"}}
+                                                <span>15</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="news__big">
+                                    <div class="news__big-bg m-bg-cont">
+                                        <img src="%=static=%img/content/news-bg.jpg" alt="">
+                                    </div>
+
+                                    <div class="news__big-date">
+                                        {{Icon iconName="news-time"}}
+                                        <span>28.02.2018</span>
+                                    </div>
+                                    <div class="news__big-title">
+                                            25-ая Юбилейная Казахстанская Международная выставка «НЕФТЬ
+                                            и ГАЗ» KIOGE 2017
+                                    </div>
+                                    <div class="news__big-desc">
+                                            с 04 октября по 06 октября в г. Алматы прошла 25-ая Юбилейная Казахстанская Международная выставка «НЕФТЬ и ГАЗ» KIOGE
+                                    </div>
+                                    <div class="news__big-bottom">
+                                        <a href="#" class="news__big-link">
+                                            Читать полностью
+                                            {{Icon iconName="news-arrow"}}
+                                        </a>
+                                        <div class="news__big-features">
+                                            <div class="news__big-com">
+                                                {{Icon iconName="news-com"}}
+                                                <span>15</span>
+                                            </div>
+                                            <div class="news__big-views">
+                                                {{Icon iconName="news-views"}}
+                                                <span>15</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+
+                            <div class="news__right">
+                                
+                                <a href="#" class="news__lil">
+                                    <div class="news__lil-link">
+                                        Перейти {{Icon iconName="news-arrow"}}
+                                    </div>
+                                    <div class="news__lil-bg m-bg-cont">
+                                        <img src="%=static=%img/content/news-bg.jpg" alt="">
+                                    </div>
+                                    <div class="news__lil-title">
+                                        25-ая Юбилейная Казахстанская
+                                        Международная выставка «НЕФТЬ и ГАЗ» ...                                        
+                                    </div>
+                                </a>
+
+                                <a href="#" class="news__lil">
+                                    <div class="news__lil-link">
+                                        Перейти {{Icon iconName="news-arrow"}}
+                                    </div>
+                                    <div class="news__lil-bg m-bg-cont">
+                                        <img src="%=static=%img/content/news-bg.jpg" alt="">
+                                    </div>
+                                    <div class="news__lil-title">
+                                        25-ая Юбилейная Казахстанская
+                                        Международная выставка «НЕФТЬ и ГАЗ» ...                                        
+                                    </div>
+                                </a>
+
+                                <a href="#" class="news__lil">
+                                    <div class="news__lil-link">
+                                        Перейти {{Icon iconName="news-arrow"}}
+                                    </div>
+                                    <div class="news__lil-bg m-bg-cont">
+                                        <img src="%=static=%img/content/news-bg.jpg" alt="">
+                                    </div>
+                                    <div class="news__lil-title">
+                                        25-ая Юбилейная Казахстанская
+                                        Международная выставка «НЕФТЬ и ГАЗ» ...                                        
+                                    </div>
+                                </a>
+
+                                <a href="#" class="news__lil">
+                                    <div class="news__lil-link">
+                                        Перейти {{Icon iconName="news-arrow"}}
+                                    </div>
+                                    <div class="news__lil-bg m-bg-cont">
+                                        <img src="%=static=%img/content/news-bg.jpg" alt="">
+                                    </div>
+                                    <div class="news__lil-title">
+                                        25-ая Юбилейная Казахстанская
+                                        Международная выставка «НЕФТЬ и ГАЗ» ...                                        
+                                    </div>
+                                </a>
+
+                                <a href="#" class="news__lil">
+                                    <div class="news__lil-link">
+                                        Перейти {{Icon iconName="news-arrow"}}
+                                    </div>
+                                    <div class="news__lil-bg m-bg-cont">
+                                        <img src="%=static=%img/content/news-bg.jpg" alt="">
+                                    </div>
+                                    <div class="news__lil-title">
+                                        25-ая Юбилейная Казахстанская
+                                        Международная выставка «НЕФТЬ и ГАЗ» ...                                        
+                                    </div>
+                                </a>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="common">
+                <div class="wrapper">
+                    <div class="common__container">
+
+                        <div class="common__title">
+                            <div class="m-title-2">
+                                    <span>Тянь-Шань</span> Engineering
+                            </div>
+                            <a href="#" class="m-link m-link-before">
+                                    О компании
+                            </a>
+                        </div>
+
+                        <div class="common__content">
+                            <p>
+                                
+                                В октябре 2006 группа инженеров, проработавших много лет на рынке промышленной автоматизации, создала ТОО «Тянь-Шань Engineering» с целью реализации опыта, полученного за эти годы, на благо своих заказчиков. Слово "Engineering" (Инжиниринг) не просто является частью названия нашей компании, но представляет собой наш подход к ведению бизнеса.
+                            </p>
+                            <p>
+                                    Мы рассматриваем инжиниринг как творческий процесс, который начинается с технических требований и технического задания, обследования Вашего объекта и включает в себя создание проектно-сметной документации, оптимальный выбор и поставку оборудования, монтаж, пуско-наладку и метрологическое обеспечение, а также весь комплекс работ вплоть до введения в эксплуатацию с последующим сервисным обслуживанием.
+
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
             
 
             {{> map/map}}
