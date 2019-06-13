@@ -1,17 +1,28 @@
+{{> preload/preload}}
 <div class="header">
     <div class="wrapper">
         <div class="header__container">
-    
-            <div class="header__menu">
-                <a href="faq.html">Частые вопросы</a>
-                <a href="reviews.html">Отзывы</a>
-                <a href="docs.html">Документация</a>
-                <a href="test.html">Опросные листы  </a>
-                <a href="press.html">Пресс-центр</a>
-                <a href="about.html">О нас</a>
+            <a href="#" class="header__logo">
+                <img src="%=static=%img/content/sidebar-logo.png" alt="">
+            </a>
+
+            <div class="header__menu-container">
+                
+                <div class="header__menu-open">
+                    {{Icon iconName="menu-header"}}
+                </div>
+
+                <div class="header__menu">
+                    <a href="faq.html">Частые вопросы</a>
+                    <a href="reviews.html">Отзывы</a>
+                    <a href="docs.html">Документация</a>
+                    <a href="test.html">Опросные листы  </a>
+                    <a href="press.html">Пресс-центр</a>
+                    <a href="about.html">О нас</a>
+                </div>
             </div>
-    
-            <div class="header__search header-search">
+
+            <div class="header__search header-search callPopup" data-popupBlock="popup-search">
                 {{Icon iconName="lupa"}}
             </div>
 
@@ -26,7 +37,12 @@
                 </div>
                 <span>+7 (727) 274 22 22</span>
             </a>
-            
+
+            <div class="sidebar-open">
+                {{Icon iconName="menu"}}
+            </div>
+
         </div>
     </div>
 </div>
+

@@ -8,26 +8,23 @@
         %=symbols=%
         
     <div class="container">
+
         <div class="sidebar">
             {{> sidebar/sidebar}}
         </div>
+
         <div class="content">
+
             <div class="animation">
                 {{Icon iconName="index-bg-1" className="index-bg-1"}}
             </div>
+
             {{> header/header-2}}
             
             <div class="first first-index">
                 <div class="first__bg m-bg-cont">
                     <img src="%=static=%img/content/first-1.jpg" alt="">
                 </div>
-                <!-- <div class="first__animation">
-                        {{Icon className="first__animation-svg-1" iconName="first-animation-2"}}
-                        {{Icon className="first__animation-svg-2" iconName="first-animation"}}
-                        {{Icon className="first__animation-svg-3" iconName="first-animation-2"}}
-                        {{Icon className="first__animation-svg-4" iconName="first-animation"}}
-                        {{Icon className="first__animation-svg-5" iconName="first-animation-2"}}
-                    </div> -->
                 <div class="wrapper">
                     <div class="first__container">
                         <div class="first__info">
@@ -39,8 +36,8 @@
                             </div>
                             <div class="first__desc mt40">
                                 <div class="first__desc-1">
-                                        Предпроектные и проектные работы, отечественный производитель, комплексная поставка,
-                                        монтажные и пусконаладочные работы с пост техническим обслуживанием на выгодных условиях
+                                    Предпроектные и проектные работы, отечественный производитель, комплексная поставка,
+                                    монтажные и пусконаладочные работы с пост техническим обслуживанием на выгодных условиях
                                 </div>
                             </div>
 
@@ -74,7 +71,7 @@
 
             <div class="rel">
                 <div class="wrapper">
-                    <div class="rel__bg">
+                    <div class="rel__bg wow fadeInUp">
                         <img src="%=static=%img/content/rel-bg-1.png" alt="">
                     </div>
                     <div class="rel__container">
@@ -295,6 +292,11 @@
             </div>
 
             <div class="cycle">
+                <div class="animation scene">
+                    <div data-depth="0.3">
+                        {{Icon iconName="animation-cycle"}}
+                    </div>
+                </div>
                 <div class="wrapper">
                     <div class="cycle__container">
                         <div class="cycle__top">
@@ -303,113 +305,121 @@
                                     автоматизированных систем управления
                             </div>
                         </div>
-                        <div class="cycle__content">
-                            <svg width="1096" class="cycle-svg" height="593" viewBox="0 0 1096 593" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="cycle-path" d="M11.0006 82.0604C36.5006 171.227 491.632 296.377 599 164.058C741 -10.9421 1140.38 -60.8785 1091 95.5001C1049 228.5 -47.4996 601.999 3.00041 358C29.5962 229.498 420.5 289 483.5 465.057C527.136 587 887.5 705.457 995.5 393.057" stroke="#789BC8" stroke-opacity="0.5"/>
-                                <circle class="cycle-circle" cx="238.501" cy="198.058" r="3.5" fill="#BBCDE3"/>
-                                <circle class="cycle-circle" cx="936" cy="208" r="3" fill="#BBCDE3"/>
-                                <circle class="cycle-circle" cx="994" cy="177" r="2" fill="#BBCDE3"/>
-                                <circle class="cycle-circle" cx="953" cy="2" r="2" fill="#BBCDE3"/>
-                                <circle class="cycle-circle" cx="393" cy="221" r="2" fill="#BBCDE3"/>
-                                <circle class="cycle-circle" cx="390" cy="359" r="2" fill="#BBCDE3"/>
-                                <circle class="cycle-circle" cx="585.5" cy="346.058" r="3.5" fill="#BBCDE3"/>
-                                <circle class="cycle-circle" cx="234.501" cy="430.058" r="3.5" fill="#BBCDE3"/>
-                                <circle class="cycle-circle" cx="788" cy="587.558" r="3" fill="#BBCDE3"/>
-                            </svg>
-
-                            <div class="cycle__items">
-
-                                <div class="cycle__item">
-                                    <div class="cycle__img">{{Icon iconName="cycle-1"}}</div>
-                                    <div class="cycle__desc">
-                                        <div class="cycle__title">
-                                                Обследование
-                                                объектов
+                        <div class="cycle__content-container">
+                            <div class="cycle__content">
+                                
+                                <svg width="1096" class="cycle-svg" height="593" viewBox="0 0 1096 593" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="cycle-path" d="M11.0006 82.0604C36.5006 171.227 491.632 296.377 599 164.058C741 -10.9421 1140.38 -60.8785 1091 95.5001C1049 228.5 -47.4996 601.999 3.00041 358C29.5962 229.498 420.5 289 483.5 465.057C527.136 587 887.5 705.457 995.5 393.057" stroke="#789BC8" stroke-opacity="0.5"/>
+                                    <circle class="cycle-circle" cx="238.501" cy="198.058" r="3.5" fill="#BBCDE3"/>
+                                    <circle class="cycle-circle" cx="936" cy="208" r="3" fill="#BBCDE3"/>
+                                    <circle class="cycle-circle" cx="994" cy="177" r="2" fill="#BBCDE3"/>
+                                    <circle class="cycle-circle" cx="953" cy="2" r="2" fill="#BBCDE3"/>
+                                    <circle class="cycle-circle" cx="393" cy="221" r="2" fill="#BBCDE3"/>
+                                    <circle class="cycle-circle" cx="390" cy="359" r="2" fill="#BBCDE3"/>
+                                    <circle class="cycle-circle" cx="585.5" cy="346.058" r="3.5" fill="#BBCDE3"/>
+                                    <circle class="cycle-circle" cx="234.501" cy="430.058" r="3.5" fill="#BBCDE3"/>
+                                    <circle class="cycle-circle" cx="788" cy="587.558" r="3" fill="#BBCDE3"/>
+                                </svg>
+    
+                                <div class="cycle__items">
+    
+                                    <div class="cycle__item">
+                                        <div class="cycle__img">{{Icon iconName="cycle-1"}}</div>
+                                        <div class="cycle__desc">
+                                            <div class="cycle__title">
+                                                    Обследование
+                                                    объектов
+                                            </div>
+                                            <div class="cycle__text">
+                                                    Разработка и внедрение технологических систем
+                                                    автоматизации технологических процессов
+                                            </div>
                                         </div>
-                                        <div class="cycle__text">
-                                                Разработка и внедрение технологических систем
-                                                автоматизации технологических процессов
+                                    </div>
+        
+                                    <div class="cycle__item">
+                                        <div class="cycle__img">{{Icon iconName="cycle-2"}}</div>
+                                        <div class="cycle__desc">
+                                            <div class="cycle__title">
+                                                    Инжиниринг АСУ ТП
+                                            </div>
+                                            <div class="cycle__text">
+                                                    Разработка и внедрение технологических систем
+                                                    автоматизации технологических процессов
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+        
+                                    <div class="cycle__item">
+                                        <div class="cycle__img">{{Icon iconName="cycle-3"}}</div>
+                                        <div class="cycle__desc">
+                                            <div class="cycle__title">
+                                                    Комплексная поставка
+                                            </div>
+                                            <div class="cycle__text">
+                                                    Разработка и внедрение технологических систем
+                                                    автоматизации технологических процессов
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+        
+                                    <div class="cycle__item">
+                                        <div class="cycle__img">{{Icon iconName="cycle-4"}}</div>
+                                        <div class="cycle__desc">
+                                            <div class="cycle__title">
+                                                    Сервис
+                                            </div>
+                                            <div class="cycle__text">
+                                                    Разработка и внедрение технологических систем
+                                                    автоматизации технологических процессов
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+        
+                                    <div class="cycle__item">
+                                        <div class="cycle__img">{{Icon iconName="cycle-5"}}</div>
+                                        <div class="cycle__desc">
+                                            <div class="cycle__title">
+                                                    ПО системы
+                                            </div>
+                                            <div class="cycle__text">
+                                                    Разработка и внедрение технологических систем
+                                                    автоматизации технологических процессов
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+        
+                                    <div class="cycle__item">
+                                        <div class="cycle__img">{{Icon iconName="cycle-6"}}</div>
+                                        <div class="cycle__desc">
+                                            <div class="cycle__title">
+                                                    Типовые решения
+                                            </div>
+                                            <div class="cycle__text">
+                                                    Разработка и внедрение технологических систем
+                                                    автоматизации технологических процессов
+                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
     
-                                <div class="cycle__item">
-                                    <div class="cycle__img">{{Icon iconName="cycle-2"}}</div>
-                                    <div class="cycle__desc">
-                                        <div class="cycle__title">
-                                                Инжиниринг АСУ ТП
-                                        </div>
-                                        <div class="cycle__text">
-                                                Разработка и внедрение технологических систем
-                                                автоматизации технологических процессов
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-    
-                                <div class="cycle__item">
-                                    <div class="cycle__img">{{Icon iconName="cycle-3"}}</div>
-                                    <div class="cycle__desc">
-                                        <div class="cycle__title">
-                                                Комплексная поставка
-                                        </div>
-                                        <div class="cycle__text">
-                                                Разработка и внедрение технологических систем
-                                                автоматизации технологических процессов
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-    
-                                <div class="cycle__item">
-                                    <div class="cycle__img">{{Icon iconName="cycle-4"}}</div>
-                                    <div class="cycle__desc">
-                                        <div class="cycle__title">
-                                                Сервис
-                                        </div>
-                                        <div class="cycle__text">
-                                                Разработка и внедрение технологических систем
-                                                автоматизации технологических процессов
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-    
-                                <div class="cycle__item">
-                                    <div class="cycle__img">{{Icon iconName="cycle-5"}}</div>
-                                    <div class="cycle__desc">
-                                        <div class="cycle__title">
-                                                ПО системы
-                                        </div>
-                                        <div class="cycle__text">
-                                                Разработка и внедрение технологических систем
-                                                автоматизации технологических процессов
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-    
-                                <div class="cycle__item">
-                                    <div class="cycle__img">{{Icon iconName="cycle-6"}}</div>
-                                    <div class="cycle__desc">
-                                        <div class="cycle__title">
-                                                Типовые решения
-                                        </div>
-                                        <div class="cycle__text">
-                                                Разработка и внедрение технологических систем
-                                                автоматизации технологических процессов
-                                        </div>
-                                        
-                                    </div>
-                                </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="reason">
+                <div class="animation scene animation-1">
+                    <div data-depth="-0.3">
+                        {{Icon iconName="animation-reason-1"}}
+                    </div>
+                </div>
                 <div class="wrapper">
                     <div class="reason__container">
                         <div class="reason__top">
@@ -569,7 +579,7 @@
                 </div>
             </div>
 
-            <div class="indpartners">   
+            <div class="indpartners">
                 <div class="wrapper">
                     <div class="indpartners__container">
                         <div class="indpartners__top">
@@ -699,16 +709,13 @@
                         <div class="opinion__content">
 
                             <div class="rev-text">
-                                <div class="doc">
+                                <div class="doc callPopup" data-popupBlock="popup-lic" data-title="Государственные лицензии II категории на строительно- монтажные" data-img="static/img/content/lic1.jpg">
                                     <div class="doc__img m-bg-cont">
                                         <img src="%=static=%img/content/doc.jpg" alt="">
                                     </div>
                                     <div class="doc__button">
                                         {{Icon iconName="doc"}}
                                         Смотреть документ
-                                    </div>
-                                    <div class="doc__link lightgallery">
-                                        <a href="%=static=%img/content/doc.jpg"></a>
                                     </div>
                                 </div>
                                 <div class="rev-text__content">
@@ -728,16 +735,13 @@
                             </div>
 
                             <div class="rev-text">
-                                <div class="doc">
+                                <div class="doc callPopup" data-popupBlock="popup-lic" data-title="Государственные лицензии II категории на строительно- монтажные" data-img="static/img/content/lic1.jpg">
                                     <div class="doc__img m-bg-cont">
                                         <img src="%=static=%img/content/doc.jpg" alt="">
                                     </div>
                                     <div class="doc__button">
                                         {{Icon iconName="doc"}}
                                         Смотреть документ
-                                    </div>
-                                    <div class="doc__link lightgallery">
-                                        <a href="%=static=%img/content/doc.jpg"></a>
                                     </div>
                                 </div>
                                 <div class="rev-text__content">
@@ -772,9 +776,7 @@
                                 <div class="rev-video__link">
                                     Смотреть отзыв
                                 </div>
-                                <div class="rev-video__light lightgallery">
-                                    <a href="https://www.youtube.com/watch?v=vJWJT7AAAhc"></a>
-                                </div>
+                                
                             </div>
 
                             <div class="rev-video">
@@ -793,13 +795,9 @@
                                 <div class="rev-video__link">
                                     Смотреть отзыв
                                 </div>
-                                <div class="rev-video__light lightgallery">
-                                    <a href="https://www.youtube.com/watch?v=vJWJT7AAAhc"></a>
-                                </div>
+                                
                             </div>
-
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -823,7 +821,7 @@
                                 <div class="swiper-container lic-slider">
                                     <div class="swiper-wrapper">
 
-                                        <div class="swiper-slide lic__slide">
+                                        <div class="swiper-slide lic__slide callPopup" data-popupBlock="popup-lic" data-title="Государственные лицензии II категории на строительно- монтажные" data-img="static/img/content/lic1.jpg">
                                             <div class="lic__slide-top m-bg-cont">
                                                 <img src="%=static=%img/content/lic1.jpg" alt="">
                                             </div>
@@ -831,54 +829,36 @@
                                             <div class="lic__text">
                                                 Государственные лицензии II категории на строительно- монтажные работы и проектирование
                                             </div>
-                                            
                                         </div>
 
-                                        <div class="swiper-slide lic__slide">
+                                        <div class="swiper-slide lic__slide callPopup" data-popupBlock="popup-lic" data-title="Государственные лицензии II категории на строительно- монтажные" data-img="static/img/content/lic1.jpg">
                                             <div class="lic__slide-top m-bg-cont">
                                                 <img src="%=static=%img/content/lic1.jpg" alt="">
                                             </div>
-
                                             <div class="lic__text">
                                                 Государственные лицензии II категории на строительно- монтажные работы и проектирование
                                             </div>
-                                            
                                         </div>
 
-                                        <div class="swiper-slide lic__slide">
+                                        <div class="swiper-slide lic__slide callPopup" data-popupBlock="popup-lic" data-title="Государственные лицензии II категории на строительно- монтажные" data-img="static/img/content/lic1.jpg">
                                             <div class="lic__slide-top m-bg-cont">
                                                 <img src="%=static=%img/content/lic1.jpg" alt="">
                                             </div>
-
                                             <div class="lic__text">
                                                 Государственные лицензии II категории на строительно- монтажные работы и проектирование
                                             </div>
-                                            
                                         </div>
 
-                                        <div class="swiper-slide lic__slide">
+                                        <div class="swiper-slide lic__slide callPopup" data-popupBlock="popup-lic" data-title="Государственные лицензии II категории на строительно- монтажные" data-img="static/img/content/lic1.jpg">
                                             <div class="lic__slide-top m-bg-cont">
                                                 <img src="%=static=%img/content/lic1.jpg" alt="">
                                             </div>
-
                                             <div class="lic__text">
                                                 Государственные лицензии II категории на строительно- монтажные работы и проектирование
                                             </div>
-                                            
                                         </div>
 
-                                        <div class="swiper-slide lic__slide">
-                                            <div class="lic__slide-top m-bg-cont">
-                                                <img src="%=static=%img/content/lic1.jpg" alt="">
-                                            </div>
-
-                                            <div class="lic__text">
-                                                Государственные лицензии II категории на строительно- монтажные работы и проектирование
-                                            </div>
-                                            
-                                        </div>
-
-                                        <div class="swiper-slide lic__slide">
+                                        <div class="swiper-slide lic__slide callPopup" data-popupBlock="popup-lic" data-title="Государственные лицензии II категории на строительно- монтажные" data-img="static/img/content/lic1.jpg">
                                             <div class="lic__slide-top m-bg-cont">
                                                 <img src="%=static=%img/content/lic1.jpg" alt="">
                                             </div>
@@ -1068,7 +1048,6 @@
                 </div>
             </div>
 
-
             <div class="common">
                 <div class="wrapper">
                     <div class="common__container">
@@ -1096,9 +1075,9 @@
                     </div>
                 </div>
             </div>
-            
 
             {{> map/map}}
+
         </div>
     </div>
     {{> footer/footer}}

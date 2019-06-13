@@ -1,6 +1,9 @@
 
 $(document).ready(function () {
 	$("body").css({'visibility': "visible", "opacity": "1"});
+	$(window).on('load', function() { // makes sure the whole site is loaded
+		$(".preload").delay(300).fadeOut("slow"); // will fade out the white DIV that covers the website.
+	});
 	popup ();
 
 	var swiper = new Swiper('.slider', {
@@ -10,7 +13,13 @@ $(document).ready(function () {
 			prevEl: '.slider-prev',
 		},
 	});
-	var swiper = new Swiper('.lic-slider', {
+
+	if($(window).width() <= 600) {
+		var html = $(".header__lang").remove();
+		$(".sidebar__container").append(html); 
+
+	}
+	var licslider = new Swiper('.lic-slider', {
 		spaceBetween: 10,
 		slidesPerView: 5,
 		spaceBetween: 35,
@@ -18,12 +27,30 @@ $(document).ready(function () {
 			nextEl: '.lic-next',
 			prevEl: '.lic-prev',
 		},
+		breakpoints: {
+			1400: {
+				slidesPerView: 3,
+			},
+			1023: {
+				slidesPerView: 2,
+			},
+			767: {
+				slidesPerView: 1,
+			}
+		},
 	});
 
 	$(".html img").each(function() {
 		$(this).wrap("<figure></figure>");
 	});
 
+	$(".sidebar-open").click(function() {
+		$(".sidebar").toggleClass("visible");
+		$('.overlay').addClass('visible');
+		$('body, html').css('overflow', 'hidden');
+	});
+
+	
 	$(".sticky-block").stick_in_parent();
 
 	$(document).ready(function() {
@@ -42,19 +69,62 @@ $(document).ready(function () {
 		});
 	});
 
+	jQuery.extend(jQuery.validator.messages, {
+		required: "This field is required.",
+		remote: "Please fix this field.",
+		email: "Please enter a valid email address.",
+		url: "Please enter a valid URL.",
+		date: "Please enter a valid date.",
+		dateISO: "Please enter a valid date (ISO).",
+		number: "Please enter a valid number.",
+		digits: "Please enter only digits.",
+		creditcard: "Please enter a valid credit card number.",
+		equalTo: "Please enter the same value again.",
+		accept: "Please enter a value with a valid extension.",
+		maxlength: jQuery.validator.format("Please enter no more than {0} characters."),
+		minlength: jQuery.validator.format("Please enter at least {0} characters."),
+		rangelength: jQuery.validator.format("Please enter a value between {0} and {1} characters long."),
+		range: jQuery.validator.format("Please enter a value between {0} and {1}."),
+		max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
+		min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
+	});
+	
+    $(".serv__item").hover(function() {
+		var img = $(this).attr("data-img");
+		$(".serv__bg").css("background-image", "url("+img+")");
+
+    });
+
+	$(".lic__slide").click(function() {
+		var img = $(this).attr("data-img");
+		console.log(img);
+		var title = $(this).attr("data-title");
+		var popup = $(this).attr("data-popupBlock");
+		$("." + popup).find(".popup-lic__img").css("background-image", "url("+img+")")
+		$("." + popup).find(".popup-lic__title").text(title);
+	});
+	$(".doc").click(function() {
+		var img = $(this).attr("data-img");
+		console.log(img);
+		var title = $(this).attr("data-title");
+		var popup = $(this).attr("data-popupBlock");
+		$("." + popup).find(".popup-lic__img").css("background-image", "url("+img+")")
+		$("." + popup).find(".popup-lic__title").text(title);
+	});
+
 	$('.form').each(function() {
         var it = $(this);
          it.validate({
 			rules: {
 				number: {
-					digits: true,
-					required: false,
-					maxlength: 4,
+					// digits: true,
+					// required: true,
+					maxlength: 12,
 				}
 			},
 
-			errorPlacement: function (error, element) {
-			},
+			// errorPlacement: function (error, element) {
+			// },
 
 			submitHandler: function() {
 				$.ajax({
@@ -68,21 +138,22 @@ $(document).ready(function () {
 
 	 new WOW().init();
 
-	 var path = $(".cycle-path").get(0);
-	//  var pathlen = path.getTotalLength();
+	 var path = $(".getlength").get(0);
+	 var pathlen = path.getTotalLength();
+	 console.log(pathlen);
 	
 	if ($(".cycle__content").length > 0) {
 		if ( $(window).scrollTop() >= $(".cycle__content").offset().top - window.innerHeight ) {
 			$(".cycle__item").addClass("cycle-animation");
-			$(".cycle-path").css({"animation": "cycleanim 10s linear", "opacity": 1});
-			$(".cycle-circle").css({"animation": "circleAnim 10s linear", "opacity": 1});
+			$(".cycle-path").css({"animation": "cycleanim 6s linear", "opacity": 1});
+			$(".cycle-circle").css({"animation": "circleAnim 6s linear", "opacity": 1});
 			$(".cycle-circle").css("opacity", 1);
 		}
 		var a = 0;
 		$(window).scroll(function(){
 			if ( $(window).scrollTop() >= $(".cycle__content").offset().top - $(".cycle__content").innerHeight() ) {
 				$(".cycle__item").addClass("cycle-animation");
-				$(".cycle-path").css({"animation": "cycleanim 10s linear", "opacity": 1});
+				$(".cycle-path").css({"animation": "cycleanim 6s linear", "opacity": 1});
 				$(".cycle-circle").css("opacity", 1);
 			}
 		});
@@ -204,23 +275,17 @@ $(document).ready(function () {
 				  $(".sidebar__sub-menu").toggleClass("active");
 				  $(this).removeClass("active");
 				  $(".sidebar").toggleClass("active");
+
 	  
 			  } else {
 				  $(this).addClass("active");
 				  $(".sidebar__sub-menu").css("height", height2);	
 				  $(".sidebar__sub-menu").toggleClass("active");
 				  $(".sidebar").toggleClass("active");
+
 			  }
 		  })
 	  }
-
-	  $(".path-ok").each(function() {
-		var path = document.querySelector('.path-ok:nth-child(1)'),
-		length = path.getTotalLength();
-		console.log(length);
-
-	  });
-
 
 	
 if($("canvas").length > 0) {

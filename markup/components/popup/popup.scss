@@ -32,18 +32,41 @@
     padding: 84px 80px;
     visibility: hidden;
     transform: translateX(-100%);
+    @media screen and (max-width: 1024px) {
+        width: 400px;
+        padding: 30px;
+    }
+    @media screen and (max-width: 767px) {
+        width: 280px;
+        padding: 15px;
+        .m-button {
+            font-size: 14px;
+            padding: 10px;
+        }
+    }
+
     &.visible {
-        visibility: visible;    
+        visibility: visible;
         transform: translateX(0%);
     }
-    &__content {
-        margin-top: 185px;
-    }
+
     &__title {
         font-weight: bold;
         font-size: 20px;
         color: #3e3e3e;
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
+        }
     }
+
+    &__content-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
     .sidebar__logo {
         margin-bottom: 0;
         padding: 0;
@@ -52,34 +75,179 @@
         align-items: center;
 
     }
+
     &__form {
         margin-top: 75px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        input{
+        @media screen and (max-width: 767px) {
+            margin-top: 30px;
+        }
+        input {
             box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
             margin-bottom: 20px;
             border: none;
         }
     }
+
     &__text {
         margin-top: 55px;
         font-size: 14px;
         color: #3e3e3e;
+
         a {
             font-size: 14px;
             color: #3e3e3e;
+
             &:hover {
                 text-decoration: underline;
             }
         }
     }
+
     &__form {
         width: 100%;
-        input,button {
+
+        input, button {
             width: 100%;
             max-width: 100%;
+        }
+    }
+}
+
+.popup-search {
+    position: fixed;
+    top: 43px;
+    left: 386px;
+    height: auto;
+    max-width: 1070px;
+    width: 100% !important;
+    padding: 0;
+    border-radius: 4px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    background-color: #fff;
+    transform: none;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    @media screen and (max-width: 1440px) {
+        max-width: 700px;
+    }
+    @media screen and (max-width: 1024px) {
+        max-width: calc(100vw - 40px);
+        left: 20px;
+        top: 20px;
+    }
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    &__form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__input {
+        height: 50px;
+        padding-right: 65px;
+        width: 100%;
+        padding-left: 65px;
+        color: #454545;
+        font-size: 16px;
+        border-radius: 4px;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+    }
+    &__content {
+        padding: 20px 40px;
+        &-input {
+            padding: 10px 25px;
+        }
+        @media screen and (max-width: 768px) {
+            padding: 0;
+        }
+    }
+    &__button {
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        justify-content: center;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.6;
+        }
+        background-color: transparent;
+        background-image: none;
+        border: 0;
+    }
+    &__close {
+        height: 50px;
+        width: 70px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        justify-content: center;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
+.m-radio {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px 25px;
+    cursor: pointer;
+    white-space: nowrap;
+    input {
+        display: none;
+        &:checked {
+            & ~ .popup-search__text {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.popup-lic {
+    &__img {
+        width: 100%;
+        height: 585px;
+        margin-bottom: 25px;
+        @media screen and (max-width: 767px) {
+            height: 300px;
+        }
+    }
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    &__title {
+        margin-bottom: 40px;
+        font-weight: bold;
+        color: black;
+    }
+    &__back {
+        svg {
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+        cursor: pointer;
+        &:hover {
+            svg {
+                transform: translate(-7px);
+            }
         }
     }
 }
