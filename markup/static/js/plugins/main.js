@@ -138,7 +138,7 @@ $(document).ready(function () {
 
 	 new WOW().init();
 
-	 var path = $(".getlength").get(0);
+	 var path = $(".header-logo-path").get(0);
 	 var pathlen = path.getTotalLength();
 	 console.log(pathlen);
 	
@@ -225,7 +225,7 @@ $(document).ready(function () {
 
 	$(".lightgallery").lightGallery(); 
 	
-	 
+	$(".html table").wrap("<div class='m-table-container'></div>");
 
 	 $(document).on('click', '.number-input-container .number-increment', function(e) {
         let $input = $(this).siblings('.number-input'),
