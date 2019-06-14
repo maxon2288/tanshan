@@ -3206,20 +3206,28 @@ $blue: #007CC2;
 @keyframes logostroke {
     0% {
         stroke-dashoffset: 436.875;
-        fill: none;
+        fill: transparent;
     }
-    90% {
-        fill: none;
+    70% {
+        fill: transparent;
     }
-    100% {
+    80% {
         fill: $blue;
         stroke-dashoffset: 0;
+        stroke:black;
+    }
+    100% {
+        stroke: transparent;
+            
     }
 }
 .header-logo-path {
     stroke-dasharray: 436.875; 
-    fill: none;
-    stroke-width: 3px;
+    fill: $blue;
+    stroke-width: 0.5px;
+    stroke: transparent;
+    animation: logostroke 5s;   
+    animation-delay: 1s;
 }
 
 .top-line-link {
