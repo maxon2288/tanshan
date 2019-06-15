@@ -1,7 +1,7 @@
 function popup() {
     $('.popupClose, .overlay').on('click', function (event) {
         $('body, html').css('overflow', 'auto');
-        $('.popup, .overlay, .sidebar, .popup__container, .nav-container').removeClass('visible');
+        $('.popup, .overlay, .sidebar, .sidebar__container, .popup__container, .nav-container').removeClass('visible');
     });
     
     $(".callPopup").on('click', function (event) {
