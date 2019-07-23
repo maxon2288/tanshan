@@ -221,18 +221,32 @@
     }
 }
 
+.popup-lic__img.m-bg-cont {
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
 .popup-lic {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     &__img {
+        margin-left: auto;
+        margin-right: auto;
         width: 100%;
         height: 585px;
         margin-bottom: 25px;
-        @media screen and (max-width: 767px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media screen and (max-width: 1400px) {
             height: 300px;
         }
     }
-    display: flex;
-    align-items: flex-start;
-    text-align: left;
     &__title {
         margin-bottom: 40px;
         font-weight: bold;

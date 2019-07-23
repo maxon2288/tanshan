@@ -102,7 +102,7 @@ $(document).ready(function () {
 		console.log(img);
 		var title = $(this).attr("data-title");
 		var popup = $(this).attr("data-popupBlock");
-		$("." + popup).find(".popup-lic__img").css("background-image", "url("+img+")")
+		$("." + popup).find(".popup-lic__img").find("img").attr("src", img);
 		$("." + popup).find(".popup-lic__title").text(title);
 	});
 	$(".doc").click(function() {
@@ -110,7 +110,7 @@ $(document).ready(function () {
 		console.log(img);
 		var title = $(this).attr("data-title");
 		var popup = $(this).attr("data-popupBlock");
-		$("." + popup).find(".popup-lic__img").css("background-image", "url("+img+")")
+		$("." + popup).find(".popup-lic__img").find("img").attr("src", img);
 		$("." + popup).find(".popup-lic__title").text(title);
 	});
 
@@ -279,6 +279,11 @@ $(document).ready(function () {
 			slidesPerView: 1,
 		});
 	}
+
+	$(".rig-tabs__tab").each(function() {
+		var title = $(this).text();
+		$(this).attr('title', title);
+	});
 
 
 
