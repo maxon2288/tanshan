@@ -829,6 +829,9 @@ a {
         @media screen and (max-width: 767px) {
             max-width: 100%;
         }
+        @media screen and (max-width: 1600px) {
+            max-width: 700px;
+        }
         .m-title {
             line-height: 45px;
             text-transform: none;
@@ -877,14 +880,13 @@ a {
     &__imgs {
         display: flex;
         align-items: center;
-        height: 100%;
         position: relative;
+        align-items: stretch;
         margin-left: -50px;
         @media screen and (max-width: 1200px) {
             display: none;
         }
         &-items {
-            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -921,6 +923,11 @@ a {
     &__text {
         opacity: 0.9;
         margin-bottom: 15px;
+        font-size: 16px;
+        line-height: 17px;
+
+        color: rgba(255, 255, 255, 0.9);
+
     }
     &__animation {
         position: absolute;
@@ -1171,6 +1178,12 @@ a {
     border-radius: 4px;
     max-width: 315px;
     width: 100%;
+    &.error {
+        border-color: rgb(168, 66, 66);
+    }
+    &.valid {
+        border-color: rgb(66, 168, 66);
+    }
 }
 .m-button {
     background-color: #007CC2;
@@ -1284,11 +1297,12 @@ a {
         }
     }
     &__fields-2 {
-        display: flex;
         margin-top: 60px;
         flex-direction: column;
         width: 100%;
         max-width: 770px;
+        display: -webkit-box;
+        display: -ms-flexbox;
 
     }
     .m-button {
@@ -1315,6 +1329,9 @@ a {
         @media screen and (max-width: 1023px) {
             margin-bottom: 20px;
             margin-right: 0;
+        }
+        @media screen and (max-width: 1600px) {
+            max-width: 450px;
         }
     }
     &__map {
@@ -1500,8 +1517,29 @@ h3 {
     p + ul {
         margin-bottom: 20px;
     }
-    
+    h1,h2,h3,h4,h5 {
+        font-family: "gotham";
+        font-size: 34px;
+        line-height: 33px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #3E3E3E;
+    }
+    h1 {
+        font-size: 34px;
+    }
+    h2 {
+        font-size: 30px;
+        text-align: left;
+    }
+    h3 {
+        font-size: 28px;
+    }
+    h4 {
+        font-size: 24px;
+    }
     ul {
+        margin-left: 20px;  
         li {
             list-style: none;
             margin-left: 10px;
@@ -1512,7 +1550,7 @@ h3 {
                 width: 4px;
                 background-color: #202020;
                 position: absolute;
-                left: -10px;
+                left: -15px;
                 top: 8px;
                 border-radius: 10px;
             }
@@ -1633,7 +1671,9 @@ h3 {
     }
     &__tabs {
         margin-right: 68px;
-        width: 270px;
+        min-width: 270px;
+        max-width: 270px;
+
     }
     &__tab {        
         border-radius: 4px;
@@ -2620,6 +2660,10 @@ ul {
         color: #464646;
         font-weight: bold;
         margin-left: 45px;
+        @media screen and (max-width: 1600px) {
+            margin-left: 20px;
+            font-size: 14px;
+        }
     }
     &__img {
         position: absolute;
@@ -2640,7 +2684,7 @@ ul {
         display: flex;
         width: 100%;
         align-items: center;
-        @media screen and (max-width: 1440px) {
+        @media screen and (max-width: 1600px) {
             flex-direction: column;
             align-items: flex-start;
         }
@@ -2649,7 +2693,7 @@ ul {
         margin-right: -30px;
         display: flex;
         flex-wrap: wrap;
-        @media screen and (max-width: 1440px) {
+        @media screen and (max-width: 1600px) {
             margin-top: 40px;
         }
         @media screen and (max-width: 1024px) {
@@ -2669,7 +2713,7 @@ ul {
         justify-content: space-between;
         border-radius: 4px;
         overflow: hidden;
-        @media screen and (max-width: 1440px) {
+        @media screen and (max-width: 1400px) {
             padding: 20px;
             width: calc(50% - 30px);
             margin-bottom: 40px;
@@ -3319,7 +3363,6 @@ $blue: #007CC2;
     stroke-width: 0.5px;
     stroke: transparent;
     animation: logostroke 5s;   
-    animation-delay: 1s;
     stroke-width: 0.5px;
 }
 @keyframes mountain {
@@ -3344,11 +3387,9 @@ $blue: #007CC2;
 
 .mountain {
     animation: mountain 7s linear;   
-    animation-delay: 3s;
     stroke-dasharray: 436.875; 
     stroke-width: 0.5px;
     stroke: transparent;
-    animation-delay: 1s;
     stroke-width: 0.1px;
 }
 
@@ -3462,6 +3503,7 @@ $blue: #007CC2;
             font-size: 120px;
             color: #005889;
             display: block;
+            transition: 0.8s;
         }
         @media screen and (max-width: 1023px) {
             font-size: 50px;
@@ -3490,9 +3532,27 @@ $blue: #007CC2;
                 color: #325B8F;
             }
         }
-        &:nth-child(2) {margin-left: 20px}
-        &:nth-child(3) {margin-left: 57px}
-        &:nth-child(4) {margin-left: 145px}
+        &:nth-child(2) {
+            margin-left: 20px;
+            @media screen and (max-width: 1600px) {
+                margin-left: 15px;
+            }
+        }
+        &:nth-child(3) {
+            margin-left: 57px;
+            @media screen and (max-width: 1600px) {
+                margin-left: 30px;
+            }
+        }
+        &:nth-child(4) {
+            margin-left: 145px;
+            @media screen and (max-width: 1600px) {
+                margin-left: 70px;
+            }
+        }
+        @media screen and (max-width: 1600px) {
+         width: 95%;   
+        }
         @media screen and (max-width: 1400px) {
             margin-left: 0 !important;
             width: 100%;
@@ -3603,10 +3663,16 @@ $blue: #007CC2;
         display: flex;
         flex-wrap: wrap;
         margin-right: -50px;
+        @media screen and (max-width: 1600px) {
+         flex-direction: column !important;
+        }
         .rev-text, .rev-video {
             width: calc(50% - 50px);
             margin-right: 50px;
             margin-bottom: 50px;
+            @media screen and (max-width: 1600px) {
+                width: 100%;
+            }
             @media screen and (max-width: 1400px) {
                 width: 100%;
             }
@@ -3616,7 +3682,7 @@ $blue: #007CC2;
     .reviews-slider {
         .opinion__content {
             display: flex;
-            flex-direction: row !important;    
+            flex-direction: row ;    
             flex-wrap: nowrap;
             .swiper-wrapper {
                 align-items: stretch;
@@ -3631,7 +3697,6 @@ $blue: #007CC2;
 }
 
 .rev-text {
-    display: flex;
     @media screen and (max-width: 767px) {
         flex-direction: column;
     }
@@ -3730,6 +3795,9 @@ $blue: #007CC2;
     color: #4A4A4A;
     position: relative;
     border-radius: 4px;
+    @media screen and (max-width: 1600px) {
+     margin-bottom: 20px !important;   
+    }
     &__light {
         position: absolute;
         top: 0;
@@ -4243,7 +4311,7 @@ $blue: #007CC2;
         display: flex;
         flex-wrap: wrap;
         margin-right: -50px;
-        @media screen and (max-width: 1400px) {
+        @media screen and (max-width: 1600px) {
             flex-direction: column;
         }
         @media screen and (max-width: 767px) {
@@ -4254,12 +4322,16 @@ $blue: #007CC2;
             flex-direction: row;
         }
     }
+    .rev-text {
+        display: -webkit-box;
+    }
     .rev-text, 
     .rev-video {
         width: calc(50% - 50px);
         margin-right: 50px;
         margin-bottom: 55px;
-        @media screen and (max-width: 1400px) {
+        height: 100%;
+        @media screen and (max-width: 1600px) {
             width: 100%;
             margin-right: 0;
         }
@@ -4405,7 +4477,9 @@ $blue: #007CC2;
         margin-bottom: 30px;
     }
 }
-
+.preload {
+    display: none !important;
+}
 .docs {
     &__container {
         width: 100%;
@@ -4418,6 +4492,9 @@ $blue: #007CC2;
             margin-right: 37px;
             margin-top: 30px;
             margin-bottom: 30px;
+            @media screen and (max-width: 1600px) {
+                width: calc(33% - 37px);
+            }
             @media screen and (max-width: 1440px) {
                 width: calc(50% - 37px);
             }

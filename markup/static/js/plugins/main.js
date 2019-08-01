@@ -1,9 +1,9 @@
 
 $(document).ready(function () {
 	$("body").css({'visibility': "visible", "opacity": "1"});
-	$(window).on('load', function() { // makes sure the whole site is loaded
-		$(".preload").delay(300).fadeOut("slow"); // will fade out the white DIV that covers the website.
-	});
+	// $(window).on('load', function() { // makes sure the whole site is loaded
+	// 	$(".preload").delay(300).fadeOut("slow"); // will fade out the white DIV that covers the website.
+	// });
 	popup ();
 
 	var swiper = new Swiper('.slider', {
@@ -30,7 +30,7 @@ $(document).ready(function () {
 			prevEl: '.lic-prev',
 		},
 		breakpoints: {
-			1400: {
+			1600: {
 				slidesPerView: 3,
 			},
 			1023: {
@@ -94,7 +94,6 @@ $(document).ready(function () {
     $(".serv__item").hover(function() {
 		var img = $(this).attr("data-img");
 		$(".serv__bg").css("background-image", "url("+img+")");
-
     });
 
 	$(".lic__slide").click(function() {
@@ -137,13 +136,65 @@ $(document).ready(function () {
 			},  
          });
 	 });
+	$('.form-serv').each(function() {
+        var it = $(this);
+         it.validate({
+			rules: {
+				phone: {
+					// digits: true,
+					required: true,
+					minlength: 17,
+				},
+				
+			},
+
+			errorPlacement: function (error, element) {
+			},
+
+			submitHandler: function() {
+				$.ajax({
+					success: function(){
+						$(".trigger-thanx-popup").trigger("click");
+					}
+				});
+			},  
+         });
+	 });
+	$('.faq-form').each(function() {
+        var it = $(this);
+         it.validate({
+			rules: {
+				phone: {
+					// digits: true,
+					required: true,
+					minlength: 17,
+				},
+				textarea: {
+					required: true,
+				}
+			},
+
+			errorPlacement: function (error, element) {
+			},
+
+			submitHandler: function() {
+				$.ajax({
+					success: function(){
+						$(".trigger-thanx-popup").trigger("click");
+					}
+				});
+			},  
+         });
+	 });
 
 	 new WOW().init();
 
-	 var path = $(".header-logo-path").get(0);
-	 var pathlen = path.getTotalLength();
-	 console.log(pathlen);
-	
+	 if ($(".header-logo-path").length > 0) {
+		 var path = $(".header-logo-path").get(0);
+		 var pathlen = path.getTotalLength();
+		 console.log(pathlen);
+	 }
+
 	if ($(".cycle__content").length > 0) {
 		if ( $(window).scrollTop() >= $(".cycle__content").offset().top - window.innerHeight ) {
 			$(".cycle__item").addClass("cycle-animation");

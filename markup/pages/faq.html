@@ -131,7 +131,7 @@
             
 
             <div class="m-form__container">
-                <form action="#" class="m-form">
+                <form action="#" class="m-form faq-form">
                     <div class="m-form__title m-title-2">
                     Не нашли ответ?
                     </div>
@@ -141,10 +141,10 @@
                             Наш специалист перезвонит вам в течение 2 минут
                     </div>
                     <div class="m-form__fields-2">
-                        <textarea class="m-textarea" placeholder="Напишите Ваш вопрос"></textarea>
+                        <textarea class="m-textarea" name="textarea" placeholder="Напишите Ваш вопрос"></textarea>
                         
                         <div class="m-form__fields-container">
-                            <input type="text" class="phone-mask m-field mr15" placeholder="Номер телефона">
+                            <input type="text" name="phone" class="phone-mask m-field mr15" placeholder="Номер телефона">
                             <button class="m-button">Отправить</button>
                         </div>
                     </div>
@@ -158,6 +158,8 @@
                     
                 </form>
             </div>
+
+            
 
             {{> map/map}}
         </div>
