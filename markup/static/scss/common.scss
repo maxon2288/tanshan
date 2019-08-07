@@ -1994,12 +1994,15 @@ h3 {
     &__container {
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap !important;
         padding-top: 115px;
         margin-right: -30px;
+        @media screen and (max-width: 767px) {
+            flex-wrap: nowrap !important;   
+        }
     }
     &__item {
-        width: calc(25% - 47.5px);
+        width: calc(25% - 47.5px) !important;
         margin-right: 50px;
         display: flex;
         flex-direction: column;
@@ -2015,14 +2018,14 @@ h3 {
             margin-right: 0;
         }
         @media screen and (max-width: 1024px) {
-            width: calc(33% - 30px);
+            width: calc(33% - 30px) !important;
             margin-right: 30px !important;
         }
         @media screen and (max-width: 800px) {
-            width: calc(50% - 30px);            
+            width: calc(50% - 30px) !important;            
         }
         @media screen and (max-width: 425px) {
-            width: 100%;
+            width: 100% !important;
             margin-bottom: 20px;
             padding: 10px;
         }
@@ -2387,6 +2390,7 @@ h3 {
     &__right {
         max-width: 100%;
         width: 50%;
+        
         @media screen and (max-width: 1100px) {
             width: 100%;   
         }
@@ -2938,7 +2942,7 @@ ul {
                 padding-left: 30px;
                 color: #202020;
                 background: linear-gradient(90deg, #8296AF 0%, #DAE0E8 50%,transparent 50%,  transparent 100%);
-                background-position: -280px 0;
+                background-position: -100% 0;
                 background-size: 200%;
                 height: 54px;
                 position: relative;
@@ -3623,6 +3627,12 @@ $blue: #007CC2;
     position: relative;
     padding-bottom: 95px;
     padding-top: 100px;
+    .wrapper {
+        @media screen and (max-width: 1600px) {
+         padding-right: 40px;
+         max-width: calc(100% - 108px);   
+        }
+    }
     @media screen and (max-width: 767px) {
         padding: 50px 0;
     }
@@ -3659,19 +3669,22 @@ $blue: #007CC2;
     &__container {
         width: 100%;
     }
+    .swiper-container {
+        display: flex;
+        margin-right: -50px;
+    }
     &__content {
         display: flex;
-        flex-wrap: wrap;
         margin-right: -50px;
-        @media screen and (max-width: 1600px) {
+        @media screen and (max-width: 1400px) {
          flex-direction: column !important;
         }
         .rev-text, .rev-video {
             width: calc(50% - 50px);
             margin-right: 50px;
             margin-bottom: 50px;
-            @media screen and (max-width: 1600px) {
-                width: 100%;
+            &__content {
+                width: 100% !important;
             }
             @media screen and (max-width: 1400px) {
                 width: 100%;
@@ -3682,31 +3695,35 @@ $blue: #007CC2;
     .reviews-slider {
         .opinion__content {
             display: flex;
-            flex-direction: row ;    
-            flex-wrap: nowrap;
+            flex-direction: row ;
+            flex-wrap: wrap;
             .swiper-wrapper {
                 align-items: stretch;
             }
-        }
-        .swiper-slide {
-            margin-bottom: 0;
-            height: auto;
         }
     }
     
 }
 
 .rev-text {
+    display: flex;
+    max-height: 335px;
+    margin-bottom: 30px;
     @media screen and (max-width: 767px) {
         flex-direction: column;
     }
     &__content {
         margin-left: 20px;
         padding-top: 15px;
+        max-height: 100%;
+        overflow: hidden;
         @media screen and (max-width: 767px) {
             padding-left: 0;   
             margin-left: 0;
         }
+    }
+    .doc + .rev-text__content {
+        width: calc(100% - 300px);
     }
     &__title {
         font-size: 18px;
@@ -4311,7 +4328,7 @@ $blue: #007CC2;
         display: flex;
         flex-wrap: wrap;
         margin-right: -50px;
-        @media screen and (max-width: 1600px) {
+        @media screen and (max-width: 1500px) {
             flex-direction: column;
         }
         @media screen and (max-width: 767px) {
@@ -4331,9 +4348,8 @@ $blue: #007CC2;
         margin-right: 50px;
         margin-bottom: 55px;
         height: 100%;
-        @media screen and (max-width: 1600px) {
+        @media screen and (max-width: 1500px) {
             width: 100%;
-            margin-right: 0;
         }
     }
     .rev-video {
