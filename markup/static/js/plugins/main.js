@@ -276,8 +276,24 @@ $(document).ready(function () {
 		});
 	}
 
-	$(".lightgallery").lightGallery(); 
 	
+
+	$(".gallery a").each(function() {
+		var fugurehtml = $(this).find('img').remove();
+		$(this).append(fugurehtml);
+		
+		var iconhtml = $(this).parent(".gallery-icon").html();
+		$(this).parent(".gallery-icon").remove();
+		$(".gallery").append(iconhtml);
+		
+	});
+	$(".gallery").find("figure").remove();
+
+	$(".lightgallery, .gallery ").lightGallery(); 
+	$('.gallery-icon').click(function() {
+		$(this).find("a").trigger("click");
+	});
+
 	$(".html table").wrap("<div class='m-table-container'></div>");
 
 	 $(document).on('click', '.number-input-container .number-increment', function(e) {

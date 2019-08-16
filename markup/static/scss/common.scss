@@ -3705,6 +3705,25 @@ $blue: #007CC2;
     
 }
 
+.gallery {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    a {
+        display: flex;
+        width: calc(50% - 20px);
+        margin-right: 20px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 155px;
+        margin-bottom: 20px;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+    }
+}
+
 .rev-text {
     display: flex;
     max-height: 335px;
