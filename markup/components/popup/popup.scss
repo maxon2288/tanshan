@@ -23,7 +23,7 @@
     transition: 0.3s;
     left: 0;
     top: 0;
-    z-index: 1000000;
+    z-index: 1000000000;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -176,18 +176,25 @@
     &__button {
         height: 50px;
         width: 50px;
-        display: flex;
-        align-items: center;
+        display: block;
         position: absolute;
         top: 0;
         left: 0;
-
-        justify-content: center;
+        vertical-align: middle;
         transition: 0.3s;
         cursor: pointer;
+        padding: 10px;
+        
         &:hover {
             opacity: 0.6;
         }
+        svg {
+            float: center;
+            vertical-align: middle;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: transparent;
         background-image: none;
         border: 0;
