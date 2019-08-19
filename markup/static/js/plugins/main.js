@@ -53,14 +53,18 @@ $(document).ready(function () {
 		$('body, html').css('overflow', 'hidden');
 		$(".sidebar").addClass("z1000");
 	});
-
+	var i = 0;
 	$(".gallery-item").each(function () {
+		i++;
+		var cycle = $(".gallery-item").length;
 		if ($(this).find('a').length > 0) {
 			var href = $(this).find("a").attr("href");
 			var ahtml = $(this).find("a").html();
 			$(this).find('a').replaceWith("<div>"+ahtml+"</div>");
 			var html = $(this).html();
 			$(this).replaceWith("<a class='gallery-item' href="+href+">"+html+"</a>")
+		}
+		if (i == cycle) {
 			$(".gallery").lightGallery();
 		}
 	});
@@ -335,7 +339,7 @@ $(document).ready(function () {
 		$(".number-result").text($input.val());
     });
 	
-	$(".m-bg-cont").each(function() {
+	$(".m-bg-cont, .gallery-icon").each(function() {
 		var it = $(this);
 		var src = it.find("img").attr("src");
 		it.css("background-image", "url(" + src + ")");

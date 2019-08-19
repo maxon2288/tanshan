@@ -2093,14 +2093,18 @@ h3 {
         display: flex;
         flex-wrap: wrap;
         &-icon {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
             display: flex;
+            border-radius: 5px;
+            min-height: 335px;
+            width: 100%;
+            background-color: #f2f2f2;
             align-items: center;
             justify-content: center;
+            position: relative;
+            background-size: cover;
+            img {
+                display: none;
+            }
             div {
                 position: absolute;
                 top: 0;
@@ -2115,11 +2119,8 @@ h3 {
         &-item {
             position: relative;
             width: calc(50% - 20px);
-            height: 335px;
             display: flex;
             margin-right: 20px;
-            background-color: #f4f4f4;
-            border-radius: 5px;
             margin-bottom: 20px;
             @media screen and (max-width: 767px) {
                 width: 100%;
@@ -2127,8 +2128,8 @@ h3 {
                 height: 250px;
             }
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
             img {
                 max-width: 100%;
                 height: auto;
