@@ -63,9 +63,9 @@ $(document).ready(function () {
 			$(this).find('a').replaceWith("<div>"+ahtml+"</div>");
 			var html = $(this).html();
 			$(this).replaceWith("<a class='gallery-item' href="+href+">"+html+"</a>")
-		}
-		if (i == cycle) {
-			$(".gallery").lightGallery();
+			if (i == cycle) {
+				$(".gallery").lightGallery();
+			}
 		}
 	});
 
