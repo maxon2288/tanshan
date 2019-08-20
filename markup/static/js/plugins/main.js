@@ -43,7 +43,7 @@ $(document).ready(function () {
 	});
 
 	$(".html img:not(.gallery img)").each(function() {
-		$(this).wrap("<figure class='alignleft'></figure>");
+		$(this).wrap("<figure></figure>");
 	});
 
 	$(".sidebar-open").click(function() {
@@ -54,15 +54,16 @@ $(document).ready(function () {
 		$(".sidebar").addClass("z1000");
 	});
 	var i = 0;
-	$(".gallery-item").each(function () {
+	$("figure.gallery-item").each(function () {
 		i++;
 		var cycle = $(".gallery-item").length;
 		if ($(this).find('a').length > 0) {
 			var href = $(this).find("a").attr("href");
 			var ahtml = $(this).find("a").html();
 			$(this).find('a').replaceWith("<div>"+ahtml+"</div>");
+			
 			var html = $(this).html();
-			$(this).replaceWith("<a class='gallery-item' href="+href+">"+html+"</a>")
+			$(this).replaceWith("<a class='gallery-item' href="+href+">"+html+"</a>");
 			if (i == cycle) {
 				$(".gallery").lightGallery();
 			}
@@ -339,7 +340,7 @@ $(document).ready(function () {
 		$(".number-result").text($input.val());
     });
 	
-	$(".m-bg-cont, .gallery-icon").each(function() {
+	$(".m-bg-cont").each(function() {
 		var it = $(this);
 		var src = it.find("img").attr("src");
 		it.css("background-image", "url(" + src + ")");

@@ -2018,10 +2018,9 @@ h3 {
 
 .aligncenter {
     clear: both;
-    display: block;
+    display: block !important;
     margin-left: auto;
     margin-right: auto;
-    display: inline;
 }
 .html {
     display: block;
@@ -2095,25 +2094,19 @@ h3 {
         &-icon {
             display: flex;
             border-radius: 5px;
-            min-height: 335px;
+            max-height: 500px;
             width: 100%;
-            background-color: #f2f2f2;
-            align-items: center;
             justify-content: center;
             position: relative;
             background-size: cover;
-            img {
-                display: none;
-            }
             div {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                text-align: center;
+                img {
+                    max-width: 100%  !important;
+                    max-height: 100% !important;
+                    height: auto !important;
+                    width: auto !important;
+                }
             }
         }
         &-item {
@@ -2130,21 +2123,7 @@ h3 {
             display: flex;
             flex-direction: column;
             align-items: center;
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-            background-size: cover;
-            background-position: center center;
-            position: relative;
-            .gallery-img-item {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                width: 100%;
-            }
+            
         }
     }
     img {
@@ -2176,6 +2155,9 @@ h3 {
     }
     ul {
         margin-left: 0 !important;
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 10px;
         li {
             font-family: "gotham";
             font-size: 16px;
@@ -2199,7 +2181,10 @@ h3 {
     }
     ol {
         margin-bottom: 10px;
+        padding-left: 20px;
         margin-left: 0px;
+        padding-top: 20px;
+        padding-bottom: 10px;
         li {
             font-family: "gotham";
             font-size: 16px;
