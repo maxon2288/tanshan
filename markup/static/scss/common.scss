@@ -1575,24 +1575,27 @@ h3 {
     }
     h1,h2,h3,h4,h5 {
         font-family: "gotham";
-        font-size: 34px;
-        line-height: 33px;
         font-weight: bold;
         margin-bottom: 15px;
         color: #3E3E3E;
     }
-    h1 {
-        font-size: 34px;
-    }
     h2 {
-        font-size: 30px;
+        font-size: 24px !important;
         text-align: left;
+        line-height: 32px !important;
     }
     h3 {
-        font-size: 28px;
+        font-size: 20px  !important;
+        line-height: 28px !important;
     }
     h4 {
-        font-size: 24px;
+        font-size: 24px !important;
+        line-height: 40px !important;
+    }
+    h5 {
+        font-size: 18px !important;
+        line-height: 24px !important;
+
     }
     ul, ol {
         margin-left: 20px;  
@@ -1969,6 +1972,9 @@ h3 {
         }
     }
 }
+.rig-html {
+    margin-top: 25px;
+}
 .letter {
     svg {
         margin-right: 3px;
@@ -1981,7 +1987,6 @@ h3 {
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
-    margin-bottom: 25px;
     &:hover {
         svg {
             transform: scale(1.3);
