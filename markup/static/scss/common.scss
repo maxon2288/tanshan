@@ -1943,7 +1943,6 @@ h3 {
             flex-direction: column;
         }
     }
-    
     &__info-left {
         max-width: 346px;
         width: 100%;
@@ -1968,9 +1967,6 @@ h3 {
         @media screen and (max-width: 767px) {
             padding: 10px;
         }
-    }
-    &__container {
-        
     }
 }
 .letter {
@@ -2108,6 +2104,11 @@ h3 {
                     width: auto !important;
                 }
             }
+            @media screen and (max-width: 767px) {
+                width: 100%;
+                margin-right: 0;
+                max-height: 250px;
+            }
         }
         &-item {
             position: relative;
@@ -2118,7 +2119,7 @@ h3 {
             @media screen and (max-width: 767px) {
                 width: 100%;
                 margin-right: 0;
-                height: 250px;
+                max-height: 250px;
             }
             display: flex;
             flex-direction: column;
@@ -5255,3 +5256,81 @@ $blue: #007CC2;
     }
 }
 
+
+
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+    max-width: calc(50% - 20px);
+    @media screen and (max-width: 767px) {
+        max-width: calc(100% - 20px);
+    }
+}
+
+.gallery-columns-3 .gallery-item {
+    max-width: calc(33.33% - 20px);
+    @media screen and (max-width: 1024px) {
+        max-width: calc(50% - 20px);        
+    }
+    @media screen and (max-width: 767px) {
+        max-width: calc(100% - 20px);
+    }
+}
+
+.gallery-columns-4 .gallery-item {
+    max-width: calc(25% - 20px);
+    @media screen and (max-width: 1400px) {
+        max-width: calc(33.33% - 20px);
+    }
+    @media screen and (max-width: 1024px) {
+        max-width: calc(50% - 20px);        
+    }
+    @media screen and (max-width: 767px) {
+        max-width: calc(100% - 20px);
+    }
+}
+
+.gallery-columns-5 .gallery-item {
+    max-width: calc(20% - 20px);
+    @media screen and (max-width: 1700px) {
+        max-width: calc(25% - 20px);        
+    }
+    @media screen and (max-width: 1400px) {
+        max-width: calc(33.33% - 20px);
+    }
+    @media screen and (max-width: 1024px) {
+        max-width: calc(50% - 20px);        
+    }
+    @media screen and (max-width: 767px) {
+        max-width: calc(100% - 20px);
+    }
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
