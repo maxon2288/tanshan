@@ -15,7 +15,7 @@ $(".ymap").each(function(e){
                 });
         
                 var myPlacemark = new ymaps.Placemark([x, y], {},
-            { iconLayout: '',
+            {о
             iconImageHref: marker,
             iconImageSize: [22.45, 31], });    
         
