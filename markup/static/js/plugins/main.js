@@ -67,6 +67,8 @@ $(document).ready(function () {
 			if (i == cycle) {
 				$(".gallery").lightGallery();
 			}
+		} else {
+			$(this).find("img").wrap("<div></div>");
 		}
 	});
 
