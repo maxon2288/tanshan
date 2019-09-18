@@ -2751,6 +2751,7 @@ h3 {
     &__container {
         display: flex;
         max-width: 100%;
+        width: 100%;
         @media screen and (max-width: 1100px) {
             flex-direction: column;
         }
