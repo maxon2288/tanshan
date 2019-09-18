@@ -13,6 +13,10 @@ $(document).ready(function () {
 			prevEl: '.slider-prev',
 		},
 	});
+	var swiper = new Swiper('.about-slider', {
+		spaceBetween: 20,
+		slidesPerView: 3,
+	});
 
 	if($(window).width() <= 600) {
 		var html = $(".header__lang").remove();
@@ -103,7 +107,7 @@ $(document).ready(function () {
 			it.addClass("active");
 			it.closest(".tabs__container").find(".tabs__block").removeClass("active");
 			it.closest(".tabs__container").find("." + href).addClass('active');
-		});	
+		});
 	});
 
 	jQuery.extend(jQuery.validator.messages, {

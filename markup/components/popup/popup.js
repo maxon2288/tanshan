@@ -9,10 +9,14 @@ function popup() {
         $(".sidebar__container").css("min-width", "250px")	
         $(".overlay").removeClass("visible");
         $(".sidebar").removeClass("z1000");
+        $("html, body").css("width", "100%");
     });
     
     $(".callPopup").on('click', function (event) {
         event.preventDefault();
+        var width = $("body").innerWidth();
+        console.log(width);
+        $("html, body").css("width", width);
         var popup = $(this).attr('data-popupBlock');
         $('.overlay').addClass('visible');
         $('.' + popup).addClass('visible');
