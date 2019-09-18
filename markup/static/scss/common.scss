@@ -812,12 +812,12 @@ a {
 }
 
 @keyframes rotatecubok {
-    5%, 15%, 25%, 35%, 45% {
-        transform: rotate(30deg);
+    0%{
+        transform: scale(0);
     }
 
-    10%, 20%, 30%, 40%, 50% {
-        transform: rotate(0deg);
+    100%{
+        transform: scale(1);
     }
     
 
@@ -904,13 +904,18 @@ a {
             text-transform: none;
             max-width: 692px;
             position: relative;
-            svg {
-                animation: rotatecubok 6s infinite;
-                animation-delay: 3s;
+            .cubok-container {
                 position: absolute;
                 top: -25px;
                 left: 28%;
                 z-index: -1;
+                opacity: 0;
+                transition: 0.3s;
+                transform: scale(0);
+                &.active {
+                    transform: scale(1);
+                    opacity: 1;
+                }
             }
         }
     }
@@ -4936,6 +4941,49 @@ $blue: #007CC2;
 }
 
 .about {
+    &-prev {
+        position: absolute;
+        left: -7px;
+        top: 50%;
+        transition: 0.2s;
+        cursor: pointer;
+        &:hover {
+            svg {
+                fill: #333 !important;
+            }
+        }
+        transform: translateY(-50%);
+        svg {
+            transition: 0.2s;
+            fill: #aaa;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &-next {
+        position: absolute;
+        right: -7px;
+        top: 50%;
+        transition: 0.2s;
+        cursor: pointer;
+        &:hover {
+            svg {
+                fill: #333 !important;
+            }
+        }
+        transform: translateY(-50%) rotate(180deg);
+        svg {
+            transition: 0.2s;
+            fill: #aaa;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &__content {
+        width: calc(100% - 40px) !important;
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
     &__img {
         position: relative;
     }
@@ -4943,7 +4991,11 @@ $blue: #007CC2;
         display: flex;
         flex-direction: column;
         padding-top: 70px;
-        
+    }
+    &-slider__container {
+        position: relative;
+        display: flex;
+        justify-content: center;
     }
     &__item {
         display: flex;
@@ -5114,6 +5166,7 @@ $blue: #007CC2;
         margin-right: -20px;
         height: 455px;
         position: relative;
+        padding: 0 20px;
         @media screen and (max-width: 767px) {
             width: 100%;
             height: 200px;

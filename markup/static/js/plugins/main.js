@@ -16,6 +16,10 @@ $(document).ready(function () {
 	var swiper = new Swiper('.about-slider', {
 		spaceBetween: 20,
 		slidesPerView: 3,
+		navigation: {
+			nextEl: '.about-next',
+			prevEl: '.about-prev',
+		},
 	});
 
 	if($(window).width() <= 600) {
@@ -23,6 +27,10 @@ $(document).ready(function () {
 		$(".sidebar__container").append(html); 
 
 	}
+	setTimeout(function() {
+		$(".cubok-container").addClass("active");
+	}, 2000)
+
 	$('.phone-mask').mask("+ 7 000 000 00 00");
 
 	var licslider = new Swiper('.lic-slider', {
