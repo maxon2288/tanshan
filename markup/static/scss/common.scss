@@ -2560,6 +2560,11 @@ h3 {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
     }
     &__buttons {
         display: flex;
@@ -2584,6 +2589,9 @@ h3 {
         }
         &.active {
             background-color: #E5F6FF;            
+        }
+        &:first-child {
+            margin-left: 0;
         }
     }
     .prj__item-left {
@@ -2812,11 +2820,26 @@ h3 {
         flex-direction: row;
         flex-wrap: wrap;
         margin-right: -80px;
+        @media screen and (max-width: 1700px) {
+            margin-right: -20px;
+        }
     }
     .prj__item {
         margin-left: 0 !important;
         margin-right: 80px;
         width: calc(33% - 80px);
+        max-width: 100%;
+        @media screen and (max-width: 1700px) {
+            width: calc(33% - 20px);            
+            margin-right: 20px;
+        }
+        @media screen and (max-width: 1600px) {
+            width: calc(50% - 20px);
+        }
+        @media screen and (max-width: 767px) {
+            width: calc(100% - 20px);
+
+        }
     }
     .prj__block-title {
         padding-left: 0;
@@ -2828,6 +2851,13 @@ h3 {
         left: 0;
     }
     .prj__item {
+        &:hover {
+            .prj__item-link {
+                svg {
+                    transform: translate(-7px);
+                }
+            }
+        }
         &-block-title {
             font-style: normal;
             font-weight: normal;
