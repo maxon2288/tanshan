@@ -2582,6 +2582,9 @@ h3 {
         &:hover {
             background-color: #E5F6FF;
         }
+        &.active {
+            background-color: #E5F6FF;            
+        }
     }
     .prj__item-left {
         display: none;
@@ -2815,8 +2818,6 @@ h3 {
         margin-right: 80px;
         width: calc(33% - 80px);
     }
-    .prj__item {
-    }
     .prj__block-title {
         padding-left: 0;
     }
@@ -2880,7 +2881,7 @@ h3 {
             margin-top: 20px;
         }
     }
-    .prj__item-text {
+    .prj__item-block-desc .prj__item-text {
         margin-bottom: 20px;
     }
     

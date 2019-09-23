@@ -21,9 +21,7 @@ function popup() {
         $('.overlay').addClass('visible');
         $('.' + popup).addClass('visible');
         $('body, html').css('overflow', 'hidden');
-        
-        
     });
 
-
+    
 }

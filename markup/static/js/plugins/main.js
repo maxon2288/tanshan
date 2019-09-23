@@ -452,11 +452,16 @@ $(document).ready(function () {
 	}
 
 	$(".grid-col").click(function() {
+		$(".prj").removeClass("prj-2");
+	});
+	
+	$(".grid-row").click(function() {
 		$(".prj").addClass("prj-2");
 	});
 
-	$(".grid-row").click(function() {
-		$(".prj").removeClass("prj-2");
+	$(".prj__button").click(function() {
+		$(".prj__button").removeClass("active");
+		$(this).addClass("active");
 	});
 
 
