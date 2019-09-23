@@ -451,6 +451,14 @@ $(document).ready(function () {
 		});
 	}
 
+	$(".grid-col").click(function() {
+		$(".prj").addClass("prj-2");
+	});
+
+	$(".grid-row").click(function() {
+		$(".prj").removeClass("prj-2");
+	});
+
 
 	if ($("canvas").length > 0) {
 

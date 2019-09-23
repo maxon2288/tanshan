@@ -87,18 +87,31 @@
 
                         <div class="m-tabs__content">
 
-                            <div class="prj__top">
-                                <div class="prj__title">
-                                        Все отрасли
+                            <div class="prj__top-features">
+                                <div class="prj__top">
+                                    <div class="prj__title">
+                                            Все отрасли
+                                    </div>
+                                    <div class="prj__years">
+                                        <a href="#" class="prj__years-link active">Все года</a>
+                                        <a href="#" class="prj__years-link">2017</a>
+                                        <a href="#" class="prj__years-link">2016</a>
+                                        <a href="#" class="prj__years-link">2015</a>
+                                        <a href="#" class="prj__years-link">2014</a>
+                                    </div>
                                 </div>
-                                <div class="prj__years">
-                                    <a href="#" class="prj__years-link active">Все года</a>
-                                    <a href="#" class="prj__years-link">2017</a>
-                                    <a href="#" class="prj__years-link">2016</a>
-                                    <a href="#" class="prj__years-link">2015</a>
-                                    <a href="#" class="prj__years-link">2014</a>
+
+                                <div class="prj__buttons">
+                                    <div class="prj__button grid-col">
+                                        {{Icon iconName="grid-column"}}
+                                    </div>
+                                    <div class="prj__button grid-row">
+                                        {{Icon iconName="grid-row"}}
+                                    </div>
                                 </div>
+
                             </div>
+
 
                             <div class="prj__content">
                                 <div class="prj__block-content">
@@ -110,44 +123,11 @@
     
                                         <div class="prj__items">
     
-                                            <div class="prj__item">
-                                                <div class="prj__item-img m-bg-cont">
-                                                    <img src="%=static=%img/content/serv-img-3.jpg" alt="">
-                                                </div>
+                                            {{> prj/prjItem}}
     
-                                                <div class="prj__item-text">
-                                                    Управление монтажными и пусконаладочными
-                                                    работами на ТОО «Siemens»
-                                                </div>
+                                            {{> prj/prjItem}}
     
-                                                <div class="prj__pre"></div>
-                                            </div>
-    
-                                            <div class="prj__item">
-                                                <div class="prj__item-img m-bg-cont">
-                                                    <img src="%=static=%img/content/serv-img-3.jpg" alt="">
-                                                </div>
-    
-                                                <div class="prj__item-text">
-                                                    Управление монтажными и пусконаладочными
-                                                    работами на ТОО «Siemens»
-                                                </div>
-    
-                                                <div class="prj__pre"></div>
-                                            </div>
-    
-                                            <div class="prj__item">
-                                                <div class="prj__item-img m-bg-cont">
-                                                    <img src="%=static=%img/content/serv-img-3.jpg" alt="">
-                                                </div>
-    
-                                                <div class="prj__item-text">
-                                                    Управление монтажными и пусконаладочными
-                                                    работами на ТОО «Siemens»
-                                                </div>
-    
-                                                <div class="prj__pre"></div>
-                                            </div>
+                                            {{> prj/prjItem}}
     
                                         </div>
                                         
@@ -160,44 +140,11 @@
     
                                         <div class="prj__items">
     
-                                            <div class="prj__item">
-                                                <div class="prj__item-img m-bg-cont">
-                                                    <img src="%=static=%img/content/serv-img-3.jpg" alt="">
-                                                </div>
+                                            {{> prj/prjItem}}
     
-                                                <div class="prj__item-text">
-                                                    Управление монтажными и пусконаладочными
-                                                    работами на ТОО «Siemens»
-                                                </div>
+                                            {{> prj/prjItem}}
     
-                                                <div class="prj__pre"></div>
-                                            </div>
-    
-                                            <div class="prj__item">
-                                                <div class="prj__item-img m-bg-cont">
-                                                    <img src="%=static=%img/content/serv-img-3.jpg" alt="">
-                                                </div>
-    
-                                                <div class="prj__item-text">
-                                                    Управление монтажными и пусконаладочными
-                                                    работами на ТОО «Siemens»
-                                                </div>
-    
-                                                <div class="prj__pre"></div>
-                                            </div>
-    
-                                            <div class="prj__item">
-                                                <div class="prj__item-img m-bg-cont">
-                                                    <img src="%=static=%img/content/serv-img-3.jpg" alt="">
-                                                </div>
-    
-                                                <div class="prj__item-text">
-                                                    Управление монтажными и пусконаладочными
-                                                    работами на ТОО «Siemens»
-                                                </div>
-    
-                                                <div class="prj__pre"></div>
-                                            </div>
+                                            {{> prj/prjItem}}
     
                                         </div>
                                         
@@ -215,6 +162,7 @@
                     </div>
                 </div>
             </div>
+           
 
             {{> map/map}}
         </div>
