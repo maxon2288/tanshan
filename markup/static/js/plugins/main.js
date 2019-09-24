@@ -6,6 +6,8 @@ $(document).ready(function () {
 	// });
 	popup();
 
+	document.addEventListener('contextmenu', event => event.preventDefault());
+
 	var swiper = new Swiper('.slider', {
 		spaceBetween: 10,
 		navigation: {
