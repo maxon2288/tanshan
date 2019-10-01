@@ -559,16 +559,9 @@ a {
     &__menu-container {
         display: flex;
         justify-content: space-between;
-        max-width: 920px;
-        width: 100%;
         align-items: center;
         position: relative;
-        @media screen and (max-width: 1700px) {
-            max-width: 600px;
-        }
-        @media screen and (max-width: 1300px) {
-            max-width: 30px;
-        }
+        flex-grow: 1;
         &:hover .header__menu {
             visibility: visible;
             opacity: 1;
@@ -612,14 +605,14 @@ a {
     &__menu {
         width: 100%;
         display: flex;
-        justify-content: space-between;
-        
+        justify-content: flex-start;
         a {
             transition: 0.3s;
             padding: 10px 0;
             color: white;
             font-weight: 600;
             font-size: 16px;
+            padding-right: 10px;
             @media screen and (max-width: 1700px) {
                 font-size: 14px;
             }
