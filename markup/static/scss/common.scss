@@ -25,6 +25,10 @@ input {
     border: none;
     
 }
+
+.swiper-slide {
+    height: auto !important;
+}
 .line-path {
     fill: transparent;
 }
@@ -1579,6 +1583,12 @@ a {
         flex-wrap: wrap;
         margin-right: -30px;
     }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        width: 100%;
+    }
     &__item {
         display: flex;
         margin-bottom: 30px;
@@ -1712,6 +1722,9 @@ h3 {
         width: calc(100% - 270px);
         margin-top: 30px;
         padding-top: 15px;
+        @media screen and (max-width: 1023px) {
+            width: 100%;
+        }
     }
     &__tabs {
         margin-top: 30px;
@@ -3287,8 +3300,10 @@ ul {
         margin-right: -30px;
         display: flex;
         flex-wrap: wrap;
+        width: calc(100% - 250px);
         @media screen and (max-width: 1600px) {
             margin-top: 40px;
+            width: 100%;
         }
         @media screen and (max-width: 1024px) {
             margin-right: 0;
@@ -3507,11 +3522,18 @@ ul {
     }
     &__content {
         width: 100%;
+        display: flex;
+    }
+    &__tabs-block {
+        width: calc(100% - 280px);
+        @media screen and (max-width: 1023px) {
+            width: 100%;
+        }
     }
     &__tabs {
+        max-width: 100%;
         &-container {
             display: flex;
-            width: 100%;
             @media screen and (max-width: 1023px) {
                 flex-direction: column;
             }
@@ -3620,6 +3642,7 @@ ul {
             padding: 53px 45px;
             display: flex;
             width: 100%;    
+            max-width: 100%;
             @media screen and (max-width: 1023px) {
                 padding: 20px;
                 flex-direction: column;
@@ -3646,10 +3669,14 @@ ul {
             }
             &-dec {
                 flex-grow: 1;
+                max-width: 100%;
+                display: block;
             }
             &-text {
                 color: #202020;
                 font-size: 16px;
+                max-width: 100%;
+                display: block;
             }
         }
     }
@@ -4286,7 +4313,7 @@ $blue: #007CC2;
             display: flex;
             flex-direction: row ;
             flex-wrap: wrap;
-            .swiper-wrapper {
+            &.swiper-wrapper {
                 align-items: stretch;
             }
         }
@@ -4650,6 +4677,16 @@ $blue: #007CC2;
     .animation {
         left: 70%;
     }
+    .wrapper {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        width: 100%;    
+    }
     .animation.news-animation {
         position: absolute;
         left: -200px !important;
@@ -4665,6 +4702,7 @@ $blue: #007CC2;
     }
     &__content {
         display: flex;
+        max-width: 100%;
         @media screen and (max-width: 1024px) {
             flex-direction: column;
         }
@@ -4963,7 +5001,6 @@ $blue: #007CC2;
         width: calc(50% - 50px);
         margin-right: 50px;
         margin-bottom: 55px;
-        height: 100%;
         @media screen and (max-width: 1500px) {
             width: 100%;
         }
