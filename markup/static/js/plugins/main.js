@@ -16,6 +16,19 @@ $(document).ready(function () {
 			prevEl: '.slider-prev',
 		},
 	});
+	var swiper = new Swiper('.first-slider', {
+		direction: "vertical",
+		spaceBetween: 15,
+		slidesPerView: 3,
+		loop: true,
+		autoplay: {
+			delay: 2000,
+		},
+		navigation: {
+			nextEl: '.slider-next',
+			prevEl: '.slider-prev',
+		},
+	});
 	var swiper = new Swiper('.about-slider', {
 		spaceBetween: 20,
 		slidesPerView: 3,
