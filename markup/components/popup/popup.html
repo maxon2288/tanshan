@@ -1,28 +1,35 @@
 <div class="overlay"></div>
 
 <div class="callPopup trigger-form-consult" data-popupBlock="form-consult"></div>
-<div class="popup form-consult ">
-    <a href="index.html" class="sidebar__logo">
-        <img src="%=static=%img/content/sidebar-logo.png" alt="">
-    </a>
-    <div class="popup__content-container">
-        <div class="popup__content">
-            <div class="popup__title">
-                Заполните форму ниже <br>
-                и наш менеджер свяжется <br>
-                с Вами в ближайшие 30 минут
+<div class="popup form-consult visible">
+    <div class="popup-content-container">
+        <a href="index.html" class="sidebar__logo">
+            <img src="%=static=%img/content/sidebar-logo.png" alt="">
+        </a>
+        <div class="popup__content-container">
+            <div class="popup__content">
+                <div class="popup__title">
+                    Заполните форму ниже <br>
+                    и наш менеджер свяжется <br>
+                    с Вами в ближайшие 30 минут
+                </div>
             </div>
-        </div>
-        <form action="#" class="popup__form">
-            <input type="text" class="m-field" placeholder="Имя" name="name">
-            <input type="text" class="m-field phone-mask" placeholder="Телефон" name="phone">
-            <button class="m-button">
-                ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
-            </button>
-        </form>
-        <div class="popup__text">
-            * Нажимая кнопку, я соглашаюсь <br>
-            с <a href="#">политикой обработки персональных данных</a>
+            <form action="#" class="popup__form">
+                <input type="text" class="m-field" placeholder="Имя" name="name">
+                <input type="text" class="m-field phone-mask" placeholder="Телефон" name="phone">
+                <select name="" id="" class="nice-select">
+                    <option value="">Опция1</option>
+                    <option value="">Опция2</option>
+                </select>
+                <textarea name="textarea" class="m-textarea" placeholder="Сообщение"></textarea>
+                <button class="m-button">
+                    ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+                </button>
+            </form>
+            <div class="popup__text">
+                * Нажимая кнопку, я соглашаюсь <br>
+                с <a href="#">политикой обработки персональных данных</a>
+            </div>
         </div>
     </div>
 </div>
