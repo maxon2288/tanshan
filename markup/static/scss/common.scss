@@ -521,12 +521,31 @@ a {
         &:hover {
             text-decoration: underline;
         }
+        a {
+            color: #a3a3a3 !important;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 15px;text-align: center;
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
     &__copy {
         color: #a3a3a3;
         font-size: 13px;text-align: center;
         font-weight: 600;
         line-height: 15px;
+        a {
+            color: #a3a3a3 !important;
+            font-size: 13px;text-align: center;
+            font-weight: 600;
+            line-height: 15px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 
 }
