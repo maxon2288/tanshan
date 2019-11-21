@@ -103,7 +103,9 @@ $(document).ready(function () {
 
 	$(".lightgallery").lightGallery();
 
-
+	$('.lightgallery-1').lightGallery({
+		thumbnail:false
+	}); 
 	$(".sticky-block").stick_in_parent();
 
 	$(document).ready(function () {
@@ -159,7 +161,7 @@ $(document).ready(function () {
 		$(".serv__bg").css("background-image", "url(" + img + ")");
 	});
 
-	$(".lic__slide").click(function () {
+	$(".lic__slide, .letter").click(function () {
 		var img = $(this).attr("data-img");
 		console.log(img);
 		var title = $(this).attr("data-title");

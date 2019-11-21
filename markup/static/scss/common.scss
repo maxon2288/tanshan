@@ -912,17 +912,18 @@ a {
         border-radius: 4px;
         height: 47px;
         cursor: pointer;
-        // background-color: #fff;
-        // color: #007cc2;
-        background-color: #f7911e;
-        color: #fff;
+        background-color: #fff;
+        color: #007cc2;
+        // background-color: #f7911e;
+        // color: #fff;
         margin-top: 40px;
         font-size: 15px;
         font-weight: 600;
         max-width: 280px;
         transition: 0.3s;   
         &:hover {
-            background-color: #d87f19;
+            opacity: 0.8;
+            // background-color: #d87f19;
         }
     }
     &__bg {
@@ -1362,6 +1363,20 @@ a {
         background-color: #005889;
     }
 }
+.popup {
+    .current {
+        @media screen and (max-width: 767px) {
+            max-width: 100%;
+            max-width: 180px;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+}
+
 .m-form {
     display: flex;
     flex-direction: column;
@@ -1415,12 +1430,23 @@ a {
         margin-top: 20px;
         flex-wrap: wrap;
         margin-right: -20px;
+        max-width: 800px;
+        width: 100%;
         @media screen and (max-width: 767px) {
             flex-direction: column;
             .m-field {
                 margin-bottom: 20px;
                 max-width: 100%;
             }
+        }
+        .nice-select {
+            height: 45px;
+            flex-grow: 1;
+            width: calc(50% - 20px);
+            .list {
+                width: 100%;
+            }
+
         }
         .m-field {
             width: calc(50% - 20px);
@@ -1435,6 +1461,7 @@ a {
             border: 1px solid rgb(170, 170, 170);
             margin-bottom: 20px !important;
             max-width: 100%;
+            
             margin-right: 20px;
             width: auto !important;
         }
@@ -5767,4 +5794,46 @@ $blue: #007CC2;
 
 .gallery-caption {
 	display: block;
+}
+
+.popup-message {
+    transform: none;
+    left: 50% !important;
+    min-height: auto !important;
+    transform: translate(-50%) !important;
+    height: auto !important;
+    top: 50px !important;
+    width: 1200px !important; 
+    max-width: 1200px !important; 
+    min-height: calc(100vh - 100px) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    transition: 0.2s;
+    opacity: 0;
+    &.visible {
+        opacity: 1;
+    }
+    iframe {
+        width: 100%;
+        margin-top: 20px;
+        flex-grow: 1;
+    }
+    @media screen and (max-width: 1439px) {
+        width: 1000px !important; 
+        max-width: 1000px !important; 
+        
+    }
+    @media screen and (max-width: 1023px) {
+        width: 700px !important; 
+        max-width: 700px !important; 
+    }
+    @media screen and (max-width: 767px) {
+        width: 400px !important; 
+        max-width: 400px !important; 
+    }
+    @media screen and (max-width: 425px) {
+        width: 300px !important; 
+        max-width: 300px !important; 
+    }
 }

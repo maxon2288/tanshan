@@ -18,8 +18,11 @@
                 <input type="text" class="m-field" placeholder="Имя" name="name">
                 <input type="text" class="m-field phone-mask" placeholder="Телефон" name="phone">
                 <select name="" id="" class="nice-select">
-                    <option value="">Опция1</option>
-                    <option value="">Опция2</option>
+                    <option value="">Запросить ценовое предложение</option>
+                    <option value="">Сделать заказ</option>
+                    <option value="">Техническая консультация</option>
+                    <option value="">Обучение и семинары</option>
+                    <option value="">Техническая консультация</option>
                 </select>
                 <textarea name="textarea" class="m-textarea" placeholder="Сообщение"></textarea>
                 <button class="m-button">
@@ -62,7 +65,7 @@
 </div>
 
 <div class="callPopup trigger-thanx-popup" data-popupBlock="thanx-popup"></div>
-<div class="popup thanx-popup ">
+<div class="popup thanx-popup">
     <a href="index.html" class="sidebar__logo">
         <img src="%=static=%img/content/sidebar-logo.png" alt="">
     </a>
@@ -81,6 +84,17 @@
         </div>
         <div class="m-button popupClose">закрыть окно</div>
     </div>
+</div>
+<div class="popup popup-message">
+    <a href="index.html" class="sidebar__logo">
+        <img src="%=static=%img/content/sidebar-logo.png" alt="">
+    </a>
+    <div class="popup__content-container">
+        <div class="popup__title">
+            Просмотр файла
+        </div>
+    </div>
+    <iframe src="text.pdf" style="" frameborder="0"></iframe>
 </div>
 
 <div class="callPopup trigger-subs-popup" data-popupBlock="subs-popup"></div>
@@ -105,16 +119,30 @@
 </div>
 
 <div class="callPopup trigger-popup-lic" data-popupBlock="popup-lic"></div>
-<div class="popup popup-lic ">
+<div class="popup popup-lic">
     <div class="popup-lic__img m-bg-cont">
         <img src="" alt="">
     </div>
     <div class="popup-lic__title">
-        
+
     </div>
     <div class="popup-lic__back popupClose">
         {{Icon iconName="arrow-back"}}
-            Назад
+        Назад
+    </div>
+</div>
+
+<div class="callPopup trigger-popup-lic" data-popupBlock="popup-lic"></div>
+<div class="popup popup-lic">
+    <div class="popup-lic__img m-bg-cont">
+        <img src="" alt="">
+    </div>
+    <div class="popup-lic__title">
+
+    </div>
+    <div class="popup-lic__back popupClose">
+        {{Icon iconName="arrow-back"}}
+        Назад
     </div>
 </div>
 
@@ -122,17 +150,17 @@
 <div class="popup popup-review ">
     <div class="popup-reviews__content">
         <div class="popup-rev__title">
-    
+
         </div>
         <div class="popup-rev__name">
-    
+
         </div>
         <div class="popup-rev__desc">
-            
+
         </div>
         <div class="popup-lic__back popupClose">
             {{Icon iconName="arrow-back"}}
-                Назад
+            Назад
         </div>
     </div>
 </div>
@@ -148,41 +176,41 @@
         </div>
         <input type="text" name="number" class="popup-search__input" placeholder="Поиск">
         <div class="popup-search__content">
-            
+
             <label class="m-radio">
                 <input type="radio" name="radio1" checked>
                 <div class="popup-search__text">
-                        Искать везде
+                    Искать везде
                 </div>
             </label>
 
             <label class="m-radio">
                 <input type="radio" name="radio1">
                 <div class="popup-search__text">
-                        Искать в “Производство”
+                    Искать в “Производство”
                 </div>
             </label>
 
             <label class="m-radio">
                 <input type="radio" name="radio1">
                 <div class="popup-search__text">
-                        Искать в “Оборудование”
+                    Искать в “Оборудование”
                 </div>
             </label>
 
             <label class="m-radio">
                 <input type="radio" name="radio1">
                 <div class="popup-search__text">
-                        Искать в “Проекты”
+                    Искать в “Проекты”
                 </div>
             </label>
 
             <label class="m-radio">
                 <input type="radio" name="radio1">
                 <div class="popup-search__text">
-                        Искать в “Услуги и решения”
+                    Искать в “Услуги и решения”
                 </div>
             </label>
         </div>
     </form>
-</div>  
+</div>
