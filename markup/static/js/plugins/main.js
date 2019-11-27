@@ -470,11 +470,13 @@ $(document).ready(function () {
 	}
 
 	$(".grid-col").click(function() {
-		$(".prj").removeClass("prj-2");
+		console.log(111);
+		$(".prj, .m-tabs__tab-container, .m-tabs__tabs, .m-tabs__container").removeClass("prj-2");
 	});
 	
 	$(".grid-row").click(function() {
-		$(".prj").addClass("prj-2");
+		console.log(111);
+		$(".prj, .m-tabs__tab-container, .m-tabs__tabs, .m-tabs__container").addClass("prj-2");
 	});
 
 	$(".prj__button").click(function() {
